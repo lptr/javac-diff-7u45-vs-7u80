@@ -1,6 +1,6 @@
-Classfile /home/lptr/Temp/jdk-diff/7u45/org/gradle/build/docs/dsl/docbook/ClassDocExtensionsBuilder.class
-  Last modified Nov 24, 2016; size 7678 bytes
-  MD5 checksum 9594a685d25a89ace7a899c05ff40e8d
+Classfile /home/lptr/Temp/jdk-diff/7u80/org/gradle/build/docs/dsl/docbook/ClassDocExtensionsBuilder.class
+  Last modified Nov 24, 2016; size 7688 bytes
+  MD5 checksum 58e2a47ea250c6968776c1644bf7457c
   Compiled from "ClassDocExtensionsBuilder.java"
 public class org.gradle.build.docs.dsl.docbook.ClassDocExtensionsBuilder
   minor version: 0
@@ -58,7 +58,7 @@ Constant pool:
    #49 = Methodref          #43.#203      // org/gradle/build/docs/dsl/docbook/model/ClassDoc.getName:()Ljava/lang/String;
    #50 = Methodref          #48.#204      // org/gradle/build/docs/dsl/source/model/TypeMetaData."<init>":(Ljava/lang/String;)V
    #51 = Methodref          #44.#205      // org/gradle/build/docs/dsl/source/model/PropertyMetaData.setType:(Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;)V
-   #52 = String             #128          // para
+   #52 = String             #130          // para
    #53 = InterfaceMethodref #206.#207     // org/w3c/dom/Document.createElement:(Ljava/lang/String;)Lorg/w3c/dom/Element;
    #54 = String             #208          // The
    #55 = InterfaceMethodref #206.#209     // org/w3c/dom/Document.createTextNode:(Ljava/lang/String;)Lorg/w3c/dom/Text;
@@ -128,26 +128,26 @@ Constant pool:
   #119 = Class              #197          // org/gradle/build/docs/dsl/docbook/model/ClassDoc
   #120 = Class              #174          // org/gradle/build/docs/dsl/docbook/model/ExtensionMetaData
   #121 = Utf8               (Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc;)V
-  #122 = Utf8               e
-  #123 = Utf8               Ljavax/xml/parsers/ParserConfigurationException;
-  #124 = Utf8               id
-  #125 = Utf8               type
-  #126 = Utf8               propertyMetaData
-  #127 = Utf8               Lorg/gradle/build/docs/dsl/source/model/PropertyMetaData;
-  #128 = Utf8               para
-  #129 = Utf8               Lorg/w3c/dom/Element;
-  #130 = Utf8               propertyDoc
-  #131 = Utf8               Lorg/gradle/build/docs/dsl/docbook/model/PropertyDoc;
-  #132 = Utf8               methodMetaData
-  #133 = Utf8               Lorg/gradle/build/docs/dsl/source/model/MethodMetaData;
-  #134 = Utf8               methodDoc
-  #135 = Utf8               Lorg/gradle/build/docs/dsl/docbook/model/MethodDoc;
-  #136 = Utf8               entry
-  #137 = Utf8               Entry
-  #138 = Utf8               InnerClasses
-  #139 = Utf8               Ljava/util/Map$Entry;
-  #140 = Utf8               doc
-  #141 = Utf8               Lorg/w3c/dom/Document;
+  #122 = Utf8               doc
+  #123 = Utf8               Lorg/w3c/dom/Document;
+  #124 = Utf8               e
+  #125 = Utf8               Ljavax/xml/parsers/ParserConfigurationException;
+  #126 = Utf8               id
+  #127 = Utf8               type
+  #128 = Utf8               propertyMetaData
+  #129 = Utf8               Lorg/gradle/build/docs/dsl/source/model/PropertyMetaData;
+  #130 = Utf8               para
+  #131 = Utf8               Lorg/w3c/dom/Element;
+  #132 = Utf8               propertyDoc
+  #133 = Utf8               Lorg/gradle/build/docs/dsl/docbook/model/PropertyDoc;
+  #134 = Utf8               methodMetaData
+  #135 = Utf8               Lorg/gradle/build/docs/dsl/source/model/MethodMetaData;
+  #136 = Utf8               methodDoc
+  #137 = Utf8               Lorg/gradle/build/docs/dsl/docbook/model/MethodDoc;
+  #138 = Utf8               entry
+  #139 = Utf8               Entry
+  #140 = Utf8               InnerClasses
+  #141 = Utf8               Ljava/util/Map$Entry;
   #142 = Utf8               linkRenderer
   #143 = Utf8               Lorg/gradle/build/docs/dsl/docbook/LinkRenderer;
   #144 = Utf8               Ljava/util/Map$Entry<Ljava/lang/String;Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;>;
@@ -543,4 +543,4 @@ Constant pool:
 }
 SourceFile: "ClassDocExtensionsBuilder.java"
 InnerClasses:
-     public static #137= #39 of #164; //Entry=class java/util/Map$Entry of class java/util/Map
+     public static #139= #39 of #164; //Entry=class java/util/Map$Entry of class java/util/Map
