@@ -1,6 +1,6 @@
-Classfile /home/lptr/Temp/jdk-diff/7u45/org/gradle/build/docs/model/SimpleClassMetaDataRepository.class
-  Last modified Nov 24, 2016; size 6114 bytes
-  MD5 checksum a83b1dc7a257186856b739cc9f4b53fc
+Classfile /home/lptr/Temp/jdk-diff/7u80/org/gradle/build/docs/model/SimpleClassMetaDataRepository.class
+  Last modified Nov 24, 2016; size 6043 bytes
+  MD5 checksum ae2cea1fa2caeef0c250a7e13f47023c
   Compiled from "SimpleClassMetaDataRepository.java"
 public class org.gradle.build.docs.model.SimpleClassMetaDataRepository<T extends org.gradle.build.docs.model.Attachable<T>> extends java.lang.Object implements org.gradle.build.docs.model.ClassMetaDataRepository<T>
   Signature: #NNN                         // <T::Lorg/gradle/build/docs/model/Attachable<TT;>;>Ljava/lang/Object;Lorg/gradle/build/docs/model/ClassMetaDataRepository<TT;>;
@@ -150,9 +150,6 @@ Constant pool:
   #NNN = Utf8               Lorg/gradle/api/Action<-TT;>;
   #NNN = Utf8               (Lorg/gradle/api/Action<-TT;>;)V
   #NNN = Utf8               (Ljava/lang/String;Ljava/lang/Object;)V
-  #NNN = Utf8               x0
-  #NNN = Utf8               x1
-  #NNN = Utf8               Ljava/lang/Object;
   #NNN = Utf8               (Ljava/lang/String;)Ljava/lang/Object;
   #NNN = Utf8               Exceptions
   #NNN = Utf8               <T::Lorg/gradle/build/docs/model/Attachable<TT;>;>Ljava/lang/Object;Lorg/gradle/build/docs/model/ClassMetaDataRepository<TT;>;
@@ -694,8 +691,6 @@ Constant pool:
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
                0      10     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository;
-               0      10     1    x0   Ljava/lang/String;
-               0      10     2    x1   Ljava/lang/Object;
       LocalVariableTypeTable:
         Start  Length  Slot  Name   Signature
             0      10     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository<TT;>;
@@ -713,7 +708,6 @@ Constant pool:
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
                0       6     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository;
-               0       6     1    x0   Ljava/lang/String;
       LocalVariableTypeTable:
         Start  Length  Slot  Name   Signature
             0       6     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository<TT;>;
@@ -731,7 +725,6 @@ Constant pool:
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
                0       6     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository;
-               0       6     1    x0   Ljava/lang/String;
       LocalVariableTypeTable:
         Start  Length  Slot  Name   Signature
             0       6     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository<TT;>;
