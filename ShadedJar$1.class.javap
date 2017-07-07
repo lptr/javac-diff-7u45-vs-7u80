@@ -1,6 +1,6 @@
-Classfile /home/lptr/Temp/jdk-diff/7u45/org/gradle/ShadedJar$1.class
-  Last modified Nov 24, 2016; size 4708 bytes
-  MD5 checksum e86e214200de9dd716a70399cbfd1a7b
+Classfile /home/lptr/Temp/jdk-diff/7u80/org/gradle/ShadedJar$1.class
+  Last modified Nov 24, 2016; size 4718 bytes
+  MD5 checksum be96c21028d6f19e5474492e74e6c772
   Compiled from "ShadedJar.java"
 class org.gradle.ShadedJar$1 implements org.gradle.api.file.FileVisitor
   minor version: 0
@@ -547,7 +547,8 @@ Constant pool:
         line 216: 414
       LocalVariableTable:
         Start  Length  Slot  Name   Signature
-           68     174     2 reader   Lorg/objectweb/asm/ClassReader;
+           68       7     2 reader   Lorg/objectweb/asm/ClassReader;
+           84     158     2 reader   Lorg/objectweb/asm/ClassReader;
            59     183     3 inputStream   Ljava/io/InputStream;
            97     145     4 details   Lorg/gradle/ShadedJar$ClassDetails;
           113     129     5 classWriter   Lorg/objectweb/asm/ClassWriter;
