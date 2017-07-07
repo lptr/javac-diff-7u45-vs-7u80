@@ -1,0 +1,589 @@
+Classfile /home/lptr/Temp/jdk-diff/7u45/org/gradle/ShadedJar$1.class
+  Last modified Nov 24, 2016; size 4708 bytes
+  MD5 checksum e86e214200de9dd716a70399cbfd1a7b
+  Compiled from "ShadedJar.java"
+class org.gradle.ShadedJar$1 implements org.gradle.api.file.FileVisitor
+  minor version: 0
+  major version: 51
+  flags: ACC_SUPER
+Constant pool:
+    #1 = Fieldref           #63.#127      // org/gradle/ShadedJar$1.this$0:Lorg/gradle/ShadedJar;
+    #2 = Fieldref           #63.#128      // org/gradle/ShadedJar$1.val$writer:Ljava/io/PrintWriter;
+    #3 = Fieldref           #63.#129      // org/gradle/ShadedJar$1.val$classes:Lorg/gradle/ShadedJar$ClassGraph;
+    #4 = Fieldref           #63.#130      // org/gradle/ShadedJar$1.val$ignored:Lorg/gradle/ShadedJar$PackagePatterns;
+    #5 = Methodref          #64.#131      // java/lang/Object."<init>":()V
+    #6 = Class              #132          // java/lang/StringBuilder
+    #7 = Methodref          #6.#131       // java/lang/StringBuilder."<init>":()V
+    #8 = InterfaceMethodref #133.#134     // org/gradle/api/file/FileVisitDetails.getPath:()Ljava/lang/String;
+    #9 = Methodref          #6.#135       // java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   #10 = String             #136          // :
+   #11 = Methodref          #6.#137       // java/lang/StringBuilder.toString:()Ljava/lang/String;
+   #12 = Methodref          #138.#139     // java/io/PrintWriter.print:(Ljava/lang/String;)V
+   #13 = String             #140          // .class
+   #14 = Methodref          #141.#142     // java/lang/String.endsWith:(Ljava/lang/String;)Z
+   #15 = Class              #143          // java/io/BufferedInputStream
+   #16 = InterfaceMethodref #133.#144     // org/gradle/api/file/FileVisitDetails.open:()Ljava/io/InputStream;
+   #17 = Methodref          #15.#145      // java/io/BufferedInputStream."<init>":(Ljava/io/InputStream;)V
+   #18 = Class              #146          // org/objectweb/asm/ClassReader
+   #19 = Methodref          #18.#145      // org/objectweb/asm/ClassReader."<init>":(Ljava/io/InputStream;)V
+   #20 = Methodref          #147.#148     // java/io/InputStream.close:()V
+   #21 = Methodref          #18.#149      // org/objectweb/asm/ClassReader.getClassName:()Ljava/lang/String;
+   #22 = Methodref          #73.#150      // org/gradle/ShadedJar$ClassGraph.get:(Ljava/lang/String;)Lorg/gradle/ShadedJar$ClassDetails;
+   #23 = Fieldref           #99.#151      // org/gradle/ShadedJar$ClassDetails.visited:Z
+   #24 = Class              #152          // org/objectweb/asm/ClassWriter
+   #25 = Methodref          #24.#153      // org/objectweb/asm/ClassWriter."<init>":(I)V
+   #26 = Class              #154          // org/objectweb/asm/commons/ClassRemapper
+   #27 = Class              #155          // org/gradle/ShadedJar$1$1
+   #28 = Methodref          #27.#156      // org/gradle/ShadedJar$1$1."<init>":(Lorg/gradle/ShadedJar$1;Lorg/gradle/ShadedJar$ClassDetails;)V
+   #29 = Methodref          #26.#157      // org/objectweb/asm/commons/ClassRemapper."<init>":(Lorg/objectweb/asm/ClassVisitor;Lorg/objectweb/asm/commons/Remapper;)V
+   #30 = Methodref          #18.#158      // org/objectweb/asm/ClassReader.accept:(Lorg/objectweb/asm/ClassVisitor;I)V
+   #31 = String             #159          // mapped class name:
+   #32 = Fieldref           #99.#160      // org/gradle/ShadedJar$ClassDetails.outputClassName:Ljava/lang/String;
+   #33 = Methodref          #138.#161     // java/io/PrintWriter.println:(Ljava/lang/String;)V
+   #34 = Class              #162          // java/io/File
+   #35 = Methodref          #125.#163     // org/gradle/ShadedJar.access$000:(Lorg/gradle/ShadedJar;)Ljava/io/File;
+   #36 = Methodref          #141.#164     // java/lang/String.concat:(Ljava/lang/String;)Ljava/lang/String;
+   #37 = Methodref          #34.#165      // java/io/File."<init>":(Ljava/io/File;Ljava/lang/String;)V
+   #38 = Methodref          #34.#166      // java/io/File.getParentFile:()Ljava/io/File;
+   #39 = Methodref          #34.#167      // java/io/File.mkdirs:()Z
+   #40 = Class              #168          // java/io/FileOutputStream
+   #41 = Methodref          #40.#169      // java/io/FileOutputStream."<init>":(Ljava/io/File;)V
+   #42 = Methodref          #24.#170      // org/objectweb/asm/ClassWriter.toByteArray:()[B
+   #43 = Methodref          #171.#172     // java/io/OutputStream.write:([B)V
+   #44 = Methodref          #171.#148     // java/io/OutputStream.close:()V
+   #45 = Class              #173          // java/lang/Exception
+   #46 = Class              #174          // org/gradle/ShadedJar$ClassAnalysisException
+   #47 = String             #176          // Could not transform class from
+   #48 = InterfaceMethodref #133.#177     // org/gradle/api/file/FileVisitDetails.getFile:()Ljava/io/File;
+   #49 = Methodref          #6.#178       // java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+   #50 = Methodref          #46.#179      // org/gradle/ShadedJar$ClassAnalysisException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+   #51 = String             #180          // .properties
+   #52 = Fieldref           #73.#181      // org/gradle/ShadedJar$ClassGraph.unshadedPackages:Lorg/gradle/ShadedJar$PackagePatterns;
+   #53 = Methodref          #77.#182      // org/gradle/ShadedJar$PackagePatterns.matches:(Ljava/lang/String;)Z
+   #54 = String             #183          // include
+   #55 = Class              #184          // org/gradle/ShadedJar$ResourceDetails
+   #56 = Methodref          #55.#186      // org/gradle/ShadedJar$ResourceDetails."<init>":(Ljava/lang/String;Ljava/io/File;)V
+   #57 = Methodref          #73.#187      // org/gradle/ShadedJar$ClassGraph.addResource:(Lorg/gradle/ShadedJar$ResourceDetails;)V
+   #58 = String             #188          // META-INF/MANIFEST.MF
+   #59 = Methodref          #141.#189     // java/lang/String.equals:(Ljava/lang/Object;)Z
+   #60 = Fieldref           #63.#190      // org/gradle/ShadedJar$1.seenManifest:Z
+   #61 = Fieldref           #73.#191      // org/gradle/ShadedJar$ClassGraph.manifest:Lorg/gradle/ShadedJar$ResourceDetails;
+   #62 = String             #192          // skipped
+   #63 = Class              #193          // org/gradle/ShadedJar$1
+   #64 = Class              #194          // java/lang/Object
+   #65 = Class              #195          // org/gradle/api/file/FileVisitor
+   #66 = Utf8
+   #67 = Utf8               InnerClasses
+   #68 = Utf8               seenManifest
+   #69 = Utf8               Z
+   #70 = Utf8               val$writer
+   #71 = Utf8               Ljava/io/PrintWriter;
+   #72 = Utf8               val$classes
+   #73 = Class              #196          // org/gradle/ShadedJar$ClassGraph
+   #74 = Utf8               ClassGraph
+   #75 = Utf8               Lorg/gradle/ShadedJar$ClassGraph;
+   #76 = Utf8               val$ignored
+   #77 = Class              #197          // org/gradle/ShadedJar$PackagePatterns
+   #78 = Utf8               PackagePatterns
+   #79 = Utf8               Lorg/gradle/ShadedJar$PackagePatterns;
+   #80 = Utf8               this$0
+   #81 = Utf8               Lorg/gradle/ShadedJar;
+   #82 = Utf8               <init>
+   #83 = Utf8               (Lorg/gradle/ShadedJar;Ljava/io/PrintWriter;Lorg/gradle/ShadedJar$ClassGraph;Lorg/gradle/ShadedJar$PackagePatterns;)V
+   #84 = Utf8               Code
+   #85 = Utf8               LineNumberTable
+   #86 = Utf8               LocalVariableTable
+   #87 = Utf8               this
+   #88 = Utf8               Lorg/gradle/ShadedJar$1;
+   #89 = Utf8               visitDir
+   #90 = Utf8               (Lorg/gradle/api/file/FileVisitDetails;)V
+   #91 = Utf8               dirDetails
+   #92 = Utf8               Lorg/gradle/api/file/FileVisitDetails;
+   #93 = Utf8               visitFile
+   #94 = Utf8               reader
+   #95 = Utf8               Lorg/objectweb/asm/ClassReader;
+   #96 = Utf8               inputStream
+   #97 = Utf8               Ljava/io/InputStream;
+   #98 = Utf8               details
+   #99 = Class              #198          // org/gradle/ShadedJar$ClassDetails
+  #100 = Utf8               ClassDetails
+  #101 = Utf8               Lorg/gradle/ShadedJar$ClassDetails;
+  #102 = Utf8               classWriter
+  #103 = Utf8               Lorg/objectweb/asm/ClassWriter;
+  #104 = Utf8               outputFile
+  #105 = Utf8               Ljava/io/File;
+  #106 = Utf8               outputStream
+  #107 = Utf8               Ljava/io/OutputStream;
+  #108 = Utf8               exception
+  #109 = Utf8               Ljava/lang/Exception;
+  #110 = Utf8               fileDetails
+  #111 = Utf8               StackMapTable
+  #112 = Class              #193          // org/gradle/ShadedJar$1
+  #113 = Class              #199          // org/gradle/api/file/FileVisitDetails
+  #114 = Class              #200          // java/io/InputStream
+  #115 = Class              #201          // java/lang/Throwable
+  #116 = Class              #146          // org/objectweb/asm/ClassReader
+  #117 = Class              #198          // org/gradle/ShadedJar$ClassDetails
+  #118 = Class              #152          // org/objectweb/asm/ClassWriter
+  #119 = Class              #162          // java/io/File
+  #120 = Class              #202          // java/io/OutputStream
+  #121 = Class              #173          // java/lang/Exception
+  #122 = Utf8               SourceFile
+  #123 = Utf8               ShadedJar.java
+  #124 = Utf8               EnclosingMethod
+  #125 = Class              #203          // org/gradle/ShadedJar
+  #126 = NameAndType        #204:#205     // analyse:(Lorg/gradle/api/file/FileCollection;Lorg/gradle/ShadedJar$ClassGraph;Ljava/io/PrintWriter;)V
+  #127 = NameAndType        #80:#81       // this$0:Lorg/gradle/ShadedJar;
+  #128 = NameAndType        #70:#71       // val$writer:Ljava/io/PrintWriter;
+  #129 = NameAndType        #72:#75       // val$classes:Lorg/gradle/ShadedJar$ClassGraph;
+  #130 = NameAndType        #76:#79       // val$ignored:Lorg/gradle/ShadedJar$PackagePatterns;
+  #131 = NameAndType        #82:#206      // "<init>":()V
+  #132 = Utf8               java/lang/StringBuilder
+  #133 = Class              #199          // org/gradle/api/file/FileVisitDetails
+  #134 = NameAndType        #207:#208     // getPath:()Ljava/lang/String;
+  #135 = NameAndType        #209:#210     // append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #136 = Utf8               :
+  #137 = NameAndType        #211:#208     // toString:()Ljava/lang/String;
+  #138 = Class              #212          // java/io/PrintWriter
+  #139 = NameAndType        #213:#214     // print:(Ljava/lang/String;)V
+  #140 = Utf8               .class
+  #141 = Class              #215          // java/lang/String
+  #142 = NameAndType        #216:#217     // endsWith:(Ljava/lang/String;)Z
+  #143 = Utf8               java/io/BufferedInputStream
+  #144 = NameAndType        #218:#219     // open:()Ljava/io/InputStream;
+  #145 = NameAndType        #82:#220      // "<init>":(Ljava/io/InputStream;)V
+  #146 = Utf8               org/objectweb/asm/ClassReader
+  #147 = Class              #200          // java/io/InputStream
+  #148 = NameAndType        #221:#206     // close:()V
+  #149 = NameAndType        #222:#208     // getClassName:()Ljava/lang/String;
+  #150 = NameAndType        #223:#224     // get:(Ljava/lang/String;)Lorg/gradle/ShadedJar$ClassDetails;
+  #151 = NameAndType        #225:#69      // visited:Z
+  #152 = Utf8               org/objectweb/asm/ClassWriter
+  #153 = NameAndType        #82:#226      // "<init>":(I)V
+  #154 = Utf8               org/objectweb/asm/commons/ClassRemapper
+  #155 = Utf8               org/gradle/ShadedJar$1$1
+  #156 = NameAndType        #82:#227      // "<init>":(Lorg/gradle/ShadedJar$1;Lorg/gradle/ShadedJar$ClassDetails;)V
+  #157 = NameAndType        #82:#228      // "<init>":(Lorg/objectweb/asm/ClassVisitor;Lorg/objectweb/asm/commons/Remapper;)V
+  #158 = NameAndType        #229:#230     // accept:(Lorg/objectweb/asm/ClassVisitor;I)V
+  #159 = Utf8               mapped class name:
+  #160 = NameAndType        #231:#232     // outputClassName:Ljava/lang/String;
+  #161 = NameAndType        #233:#214     // println:(Ljava/lang/String;)V
+  #162 = Utf8               java/io/File
+  #163 = NameAndType        #234:#235     // access$000:(Lorg/gradle/ShadedJar;)Ljava/io/File;
+  #164 = NameAndType        #236:#237     // concat:(Ljava/lang/String;)Ljava/lang/String;
+  #165 = NameAndType        #82:#238      // "<init>":(Ljava/io/File;Ljava/lang/String;)V
+  #166 = NameAndType        #239:#240     // getParentFile:()Ljava/io/File;
+  #167 = NameAndType        #241:#242     // mkdirs:()Z
+  #168 = Utf8               java/io/FileOutputStream
+  #169 = NameAndType        #82:#243      // "<init>":(Ljava/io/File;)V
+  #170 = NameAndType        #244:#245     // toByteArray:()[B
+  #171 = Class              #202          // java/io/OutputStream
+  #172 = NameAndType        #246:#247     // write:([B)V
+  #173 = Utf8               java/lang/Exception
+  #174 = Utf8               org/gradle/ShadedJar$ClassAnalysisException
+  #175 = Utf8               ClassAnalysisException
+  #176 = Utf8               Could not transform class from
+  #177 = NameAndType        #248:#240     // getFile:()Ljava/io/File;
+  #178 = NameAndType        #209:#249     // append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+  #179 = NameAndType        #82:#250      // "<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+  #180 = Utf8               .properties
+  #181 = NameAndType        #251:#79      // unshadedPackages:Lorg/gradle/ShadedJar$PackagePatterns;
+  #182 = NameAndType        #252:#217     // matches:(Ljava/lang/String;)Z
+  #183 = Utf8               include
+  #184 = Utf8               org/gradle/ShadedJar$ResourceDetails
+  #185 = Utf8               ResourceDetails
+  #186 = NameAndType        #82:#253      // "<init>":(Ljava/lang/String;Ljava/io/File;)V
+  #187 = NameAndType        #254:#255     // addResource:(Lorg/gradle/ShadedJar$ResourceDetails;)V
+  #188 = Utf8               META-INF/MANIFEST.MF
+  #189 = NameAndType        #256:#257     // equals:(Ljava/lang/Object;)Z
+  #190 = NameAndType        #68:#69       // seenManifest:Z
+  #191 = NameAndType        #258:#259     // manifest:Lorg/gradle/ShadedJar$ResourceDetails;
+  #192 = Utf8               skipped
+  #193 = Utf8               org/gradle/ShadedJar$1
+  #194 = Utf8               java/lang/Object
+  #195 = Utf8               org/gradle/api/file/FileVisitor
+  #196 = Utf8               org/gradle/ShadedJar$ClassGraph
+  #197 = Utf8               org/gradle/ShadedJar$PackagePatterns
+  #198 = Utf8               org/gradle/ShadedJar$ClassDetails
+  #199 = Utf8               org/gradle/api/file/FileVisitDetails
+  #200 = Utf8               java/io/InputStream
+  #201 = Utf8               java/lang/Throwable
+  #202 = Utf8               java/io/OutputStream
+  #203 = Utf8               org/gradle/ShadedJar
+  #204 = Utf8               analyse
+  #205 = Utf8               (Lorg/gradle/api/file/FileCollection;Lorg/gradle/ShadedJar$ClassGraph;Ljava/io/PrintWriter;)V
+  #206 = Utf8               ()V
+  #207 = Utf8               getPath
+  #208 = Utf8               ()Ljava/lang/String;
+  #209 = Utf8               append
+  #210 = Utf8               (Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #211 = Utf8               toString
+  #212 = Utf8               java/io/PrintWriter
+  #213 = Utf8               print
+  #214 = Utf8               (Ljava/lang/String;)V
+  #215 = Utf8               java/lang/String
+  #216 = Utf8               endsWith
+  #217 = Utf8               (Ljava/lang/String;)Z
+  #218 = Utf8               open
+  #219 = Utf8               ()Ljava/io/InputStream;
+  #220 = Utf8               (Ljava/io/InputStream;)V
+  #221 = Utf8               close
+  #222 = Utf8               getClassName
+  #223 = Utf8               get
+  #224 = Utf8               (Ljava/lang/String;)Lorg/gradle/ShadedJar$ClassDetails;
+  #225 = Utf8               visited
+  #226 = Utf8               (I)V
+  #227 = Utf8               (Lorg/gradle/ShadedJar$1;Lorg/gradle/ShadedJar$ClassDetails;)V
+  #228 = Utf8               (Lorg/objectweb/asm/ClassVisitor;Lorg/objectweb/asm/commons/Remapper;)V
+  #229 = Utf8               accept
+  #230 = Utf8               (Lorg/objectweb/asm/ClassVisitor;I)V
+  #231 = Utf8               outputClassName
+  #232 = Utf8               Ljava/lang/String;
+  #233 = Utf8               println
+  #234 = Utf8               access$000
+  #235 = Utf8               (Lorg/gradle/ShadedJar;)Ljava/io/File;
+  #236 = Utf8               concat
+  #237 = Utf8               (Ljava/lang/String;)Ljava/lang/String;
+  #238 = Utf8               (Ljava/io/File;Ljava/lang/String;)V
+  #239 = Utf8               getParentFile
+  #240 = Utf8               ()Ljava/io/File;
+  #241 = Utf8               mkdirs
+  #242 = Utf8               ()Z
+  #243 = Utf8               (Ljava/io/File;)V
+  #244 = Utf8               toByteArray
+  #245 = Utf8               ()[B
+  #246 = Utf8               write
+  #247 = Utf8               ([B)V
+  #248 = Utf8               getFile
+  #249 = Utf8               (Ljava/lang/Object;)Ljava/lang/StringBuilder;
+  #250 = Utf8               (Ljava/lang/String;Ljava/lang/Throwable;)V
+  #251 = Utf8               unshadedPackages
+  #252 = Utf8               matches
+  #253 = Utf8               (Ljava/lang/String;Ljava/io/File;)V
+  #254 = Utf8               addResource
+  #255 = Utf8               (Lorg/gradle/ShadedJar$ResourceDetails;)V
+  #256 = Utf8               equals
+  #257 = Utf8               (Ljava/lang/Object;)Z
+  #258 = Utf8               manifest
+  #259 = Utf8               Lorg/gradle/ShadedJar$ResourceDetails;
+{
+  boolean seenManifest;
+    descriptor: Z
+    flags:
+
+  final java.io.PrintWriter val$writer;
+    descriptor: Ljava/io/PrintWriter;
+    flags: ACC_FINAL, ACC_SYNTHETIC
+
+  final org.gradle.ShadedJar$ClassGraph val$classes;
+    descriptor: Lorg/gradle/ShadedJar$ClassGraph;
+    flags: ACC_FINAL, ACC_SYNTHETIC
+
+  final org.gradle.ShadedJar$PackagePatterns val$ignored;
+    descriptor: Lorg/gradle/ShadedJar$PackagePatterns;
+    flags: ACC_FINAL, ACC_SYNTHETIC
+
+  final org.gradle.ShadedJar this$0;
+    descriptor: Lorg/gradle/ShadedJar;
+    flags: ACC_FINAL, ACC_SYNTHETIC
+
+  org.gradle.ShadedJar$1(org.gradle.ShadedJar, java.io.PrintWriter, org.gradle.ShadedJar$ClassGraph, org.gradle.ShadedJar$PackagePatterns);
+    descriptor: (Lorg/gradle/ShadedJar;Ljava/io/PrintWriter;Lorg/gradle/ShadedJar$ClassGraph;Lorg/gradle/ShadedJar$PackagePatterns;)V
+    flags:
+    Code:
+      stack=2, locals=5, args_size=5
+         0: aload_0
+         1: aload_1
+         2: putfield      #1                  // Field this$0:Lorg/gradle/ShadedJar;
+         5: aload_0
+         6: aload_2
+         7: putfield      #2                  // Field val$writer:Ljava/io/PrintWriter;
+        10: aload_0
+        11: aload_3
+        12: putfield      #3                  // Field val$classes:Lorg/gradle/ShadedJar$ClassGraph;
+        15: aload_0
+        16: aload         4
+        18: putfield      #4                  // Field val$ignored:Lorg/gradle/ShadedJar$PackagePatterns;
+        21: aload_0
+        22: invokespecial #5                  // Method java/lang/Object."<init>":()V
+        25: return
+      LineNumberTable:
+        line 162: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      26     0  this   Lorg/gradle/ShadedJar$1;
+
+  public void visitDir(org.gradle.api.file.FileVisitDetails);
+    descriptor: (Lorg/gradle/api/file/FileVisitDetails;)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=0, locals=2, args_size=2
+         0: return
+      LineNumberTable:
+        line 166: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       1     0  this   Lorg/gradle/ShadedJar$1;
+            0       1     1 dirDetails   Lorg/gradle/api/file/FileVisitDetails;
+
+  public void visitFile(org.gradle.api.file.FileVisitDetails);
+    descriptor: (Lorg/gradle/api/file/FileVisitDetails;)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=8, locals=9, args_size=2
+         0: aload_0
+         1: getfield      #2                  // Field val$writer:Ljava/io/PrintWriter;
+         4: new           #6                  // class java/lang/StringBuilder
+         7: dup
+         8: invokespecial #7                  // Method java/lang/StringBuilder."<init>":()V
+        11: aload_1
+        12: invokeinterface #8,  1            // InterfaceMethod org/gradle/api/file/FileVisitDetails.getPath:()Ljava/lang/String;
+        17: invokevirtual #9                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        20: ldc           #10                 // String :
+        22: invokevirtual #9                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+        25: invokevirtual #11                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+        28: invokevirtual #12                 // Method java/io/PrintWriter.print:(Ljava/lang/String;)V
+        31: aload_1
+        32: invokeinterface #8,  1            // InterfaceMethod org/gradle/api/file/FileVisitDetails.getPath:()Ljava/lang/String;
+        37: ldc           #13                 // String .class
+        39: invokevirtual #14                 // Method java/lang/String.endsWith:(Ljava/lang/String;)Z
+        42: ifeq          279
+        45: new           #15                 // class java/io/BufferedInputStream
+        48: dup
+        49: aload_1
+        50: invokeinterface #16,  1           // InterfaceMethod org/gradle/api/file/FileVisitDetails.open:()Ljava/io/InputStream;
+        55: invokespecial #17                 // Method java/io/BufferedInputStream."<init>":(Ljava/io/InputStream;)V
+        58: astore_3
+        59: new           #18                 // class org/objectweb/asm/ClassReader
+        62: dup
+        63: aload_3
+        64: invokespecial #19                 // Method org/objectweb/asm/ClassReader."<init>":(Ljava/io/InputStream;)V
+        67: astore_2
+        68: aload_3
+        69: invokevirtual #20                 // Method java/io/InputStream.close:()V
+        72: goto          84
+        75: astore        4
+        77: aload_3
+        78: invokevirtual #20                 // Method java/io/InputStream.close:()V
+        81: aload         4
+        83: athrow
+        84: aload_0
+        85: getfield      #3                  // Field val$classes:Lorg/gradle/ShadedJar$ClassGraph;
+        88: aload_2
+        89: invokevirtual #21                 // Method org/objectweb/asm/ClassReader.getClassName:()Ljava/lang/String;
+        92: invokevirtual #22                 // Method org/gradle/ShadedJar$ClassGraph.get:(Ljava/lang/String;)Lorg/gradle/ShadedJar$ClassDetails;
+        95: astore        4
+        97: aload         4
+        99: iconst_1
+       100: putfield      #23                 // Field org/gradle/ShadedJar$ClassDetails.visited:Z
+       103: new           #24                 // class org/objectweb/asm/ClassWriter
+       106: dup
+       107: iconst_0
+       108: invokespecial #25                 // Method org/objectweb/asm/ClassWriter."<init>":(I)V
+       111: astore        5
+       113: aload_2
+       114: new           #26                 // class org/objectweb/asm/commons/ClassRemapper
+       117: dup
+       118: aload         5
+       120: new           #27                 // class org/gradle/ShadedJar$1$1
+       123: dup
+       124: aload_0
+       125: aload         4
+       127: invokespecial #28                 // Method org/gradle/ShadedJar$1$1."<init>":(Lorg/gradle/ShadedJar$1;Lorg/gradle/ShadedJar$ClassDetails;)V
+       130: invokespecial #29                 // Method org/objectweb/asm/commons/ClassRemapper."<init>":(Lorg/objectweb/asm/ClassVisitor;Lorg/objectweb/asm/commons/Remapper;)V
+       133: bipush        8
+       135: invokevirtual #30                 // Method org/objectweb/asm/ClassReader.accept:(Lorg/objectweb/asm/ClassVisitor;I)V
+       138: aload_0
+       139: getfield      #2                  // Field val$writer:Ljava/io/PrintWriter;
+       142: new           #6                  // class java/lang/StringBuilder
+       145: dup
+       146: invokespecial #7                  // Method java/lang/StringBuilder."<init>":()V
+       149: ldc           #31                 // String mapped class name:
+       151: invokevirtual #9                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       154: aload         4
+       156: getfield      #32                 // Field org/gradle/ShadedJar$ClassDetails.outputClassName:Ljava/lang/String;
+       159: invokevirtual #9                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       162: invokevirtual #11                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+       165: invokevirtual #33                 // Method java/io/PrintWriter.println:(Ljava/lang/String;)V
+       168: new           #34                 // class java/io/File
+       171: dup
+       172: aload_0
+       173: getfield      #1                  // Field this$0:Lorg/gradle/ShadedJar;
+       176: invokestatic  #35                 // Method org/gradle/ShadedJar.access$000:(Lorg/gradle/ShadedJar;)Ljava/io/File;
+       179: aload         4
+       181: getfield      #32                 // Field org/gradle/ShadedJar$ClassDetails.outputClassName:Ljava/lang/String;
+       184: ldc           #13                 // String .class
+       186: invokevirtual #36                 // Method java/lang/String.concat:(Ljava/lang/String;)Ljava/lang/String;
+       189: invokespecial #37                 // Method java/io/File."<init>":(Ljava/io/File;Ljava/lang/String;)V
+       192: astore        6
+       194: aload         6
+       196: invokevirtual #38                 // Method java/io/File.getParentFile:()Ljava/io/File;
+       199: invokevirtual #39                 // Method java/io/File.mkdirs:()Z
+       202: pop
+       203: new           #40                 // class java/io/FileOutputStream
+       206: dup
+       207: aload         6
+       209: invokespecial #41                 // Method java/io/FileOutputStream."<init>":(Ljava/io/File;)V
+       212: astore        7
+       214: aload         7
+       216: aload         5
+       218: invokevirtual #42                 // Method org/objectweb/asm/ClassWriter.toByteArray:()[B
+       221: invokevirtual #43                 // Method java/io/OutputStream.write:([B)V
+       224: aload         7
+       226: invokevirtual #44                 // Method java/io/OutputStream.close:()V
+       229: goto          242
+       232: astore        8
+       234: aload         7
+       236: invokevirtual #44                 // Method java/io/OutputStream.close:()V
+       239: aload         8
+       241: athrow
+       242: goto          414
+       245: astore_2
+       246: new           #46                 // class org/gradle/ShadedJar$ClassAnalysisException
+       249: dup
+       250: new           #6                  // class java/lang/StringBuilder
+       253: dup
+       254: invokespecial #7                  // Method java/lang/StringBuilder."<init>":()V
+       257: ldc           #47                 // String Could not transform class from
+       259: invokevirtual #9                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+       262: aload_1
+       263: invokeinterface #48,  1           // InterfaceMethod org/gradle/api/file/FileVisitDetails.getFile:()Ljava/io/File;
+       268: invokevirtual #49                 // Method java/lang/StringBuilder.append:(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+       271: invokevirtual #11                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+       274: aload_2
+       275: invokespecial #50                 // Method org/gradle/ShadedJar$ClassAnalysisException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+       278: athrow
+       279: aload_1
+       280: invokeinterface #8,  1            // InterfaceMethod org/gradle/api/file/FileVisitDetails.getPath:()Ljava/lang/String;
+       285: ldc           #51                 // String .properties
+       287: invokevirtual #14                 // Method java/lang/String.endsWith:(Ljava/lang/String;)Z
+       290: ifeq          350
+       293: aload_0
+       294: getfield      #3                  // Field val$classes:Lorg/gradle/ShadedJar$ClassGraph;
+       297: getfield      #52                 // Field org/gradle/ShadedJar$ClassGraph.unshadedPackages:Lorg/gradle/ShadedJar$PackagePatterns;
+       300: aload_1
+       301: invokeinterface #8,  1            // InterfaceMethod org/gradle/api/file/FileVisitDetails.getPath:()Ljava/lang/String;
+       306: invokevirtual #53                 // Method org/gradle/ShadedJar$PackagePatterns.matches:(Ljava/lang/String;)Z
+       309: ifeq          350
+       312: aload_0
+       313: getfield      #2                  // Field val$writer:Ljava/io/PrintWriter;
+       316: ldc           #54                 // String include
+       318: invokevirtual #33                 // Method java/io/PrintWriter.println:(Ljava/lang/String;)V
+       321: aload_0
+       322: getfield      #3                  // Field val$classes:Lorg/gradle/ShadedJar$ClassGraph;
+       325: new           #55                 // class org/gradle/ShadedJar$ResourceDetails
+       328: dup
+       329: aload_1
+       330: invokeinterface #8,  1            // InterfaceMethod org/gradle/api/file/FileVisitDetails.getPath:()Ljava/lang/String;
+       335: aload_1
+       336: invokeinterface #48,  1           // InterfaceMethod org/gradle/api/file/FileVisitDetails.getFile:()Ljava/io/File;
+       341: invokespecial #56                 // Method org/gradle/ShadedJar$ResourceDetails."<init>":(Ljava/lang/String;Ljava/io/File;)V
+       344: invokevirtual #57                 // Method org/gradle/ShadedJar$ClassGraph.addResource:(Lorg/gradle/ShadedJar$ResourceDetails;)V
+       347: goto          414
+       350: aload_1
+       351: invokeinterface #8,  1            // InterfaceMethod org/gradle/api/file/FileVisitDetails.getPath:()Ljava/lang/String;
+       356: ldc           #58                 // String META-INF/MANIFEST.MF
+       358: invokevirtual #59                 // Method java/lang/String.equals:(Ljava/lang/Object;)Z
+       361: ifeq          405
+       364: aload_0
+       365: getfield      #60                 // Field seenManifest:Z
+       368: ifne          405
+       371: aload_0
+       372: iconst_1
+       373: putfield      #60                 // Field seenManifest:Z
+       376: aload_0
+       377: getfield      #3                  // Field val$classes:Lorg/gradle/ShadedJar$ClassGraph;
+       380: new           #55                 // class org/gradle/ShadedJar$ResourceDetails
+       383: dup
+       384: aload_1
+       385: invokeinterface #8,  1            // InterfaceMethod org/gradle/api/file/FileVisitDetails.getPath:()Ljava/lang/String;
+       390: aload_1
+       391: invokeinterface #48,  1           // InterfaceMethod org/gradle/api/file/FileVisitDetails.getFile:()Ljava/io/File;
+       396: invokespecial #56                 // Method org/gradle/ShadedJar$ResourceDetails."<init>":(Ljava/lang/String;Ljava/io/File;)V
+       399: putfield      #61                 // Field org/gradle/ShadedJar$ClassGraph.manifest:Lorg/gradle/ShadedJar$ResourceDetails;
+       402: goto          414
+       405: aload_0
+       406: getfield      #2                  // Field val$writer:Ljava/io/PrintWriter;
+       409: ldc           #62                 // String skipped
+       411: invokevirtual #33                 // Method java/io/PrintWriter.println:(Ljava/lang/String;)V
+       414: return
+      Exception table:
+         from    to  target type
+            59    68    75   any
+            75    77    75   any
+           214   224   232   any
+           232   234   232   any
+            45   242   245   Class java/lang/Exception
+      LineNumberTable:
+        line 169: 0
+        line 170: 31
+        line 173: 45
+        line 175: 59
+        line 177: 68
+        line 178: 72
+        line 177: 75
+        line 179: 84
+        line 180: 97
+        line 181: 103
+        line 182: 113
+        line 195: 138
+        line 196: 168
+        line 197: 194
+        line 198: 203
+        line 200: 214
+        line 202: 224
+        line 203: 229
+        line 202: 232
+        line 206: 242
+        line 204: 245
+        line 205: 246
+        line 207: 279
+        line 208: 312
+        line 209: 321
+        line 210: 350
+        line 211: 371
+        line 212: 376
+        line 214: 405
+        line 216: 414
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           68     174     2 reader   Lorg/objectweb/asm/ClassReader;
+           59     183     3 inputStream   Ljava/io/InputStream;
+           97     145     4 details   Lorg/gradle/ShadedJar$ClassDetails;
+          113     129     5 classWriter   Lorg/objectweb/asm/ClassWriter;
+          194      48     6 outputFile   Ljava/io/File;
+          214      28     7 outputStream   Ljava/io/OutputStream;
+          246      33     2 exception   Ljava/lang/Exception;
+            0     415     0  this   Lorg/gradle/ShadedJar$1;
+            0     415     1 fileDetails   Lorg/gradle/api/file/FileVisitDetails;
+      StackMapTable: number_of_entries = 9
+        frame_type = 255 /* full_frame */
+          offset_delta = 75
+          locals = [ class org/gradle/ShadedJar$1, class org/gradle/api/file/FileVisitDetails, top, class java/io/InputStream ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 8
+          locals = [ class org/gradle/ShadedJar$1, class org/gradle/api/file/FileVisitDetails, class org/objectweb/asm/ClassReader, class java/io/InputStream ]
+          stack = []
+        frame_type = 255 /* full_frame */
+          offset_delta = 147
+          locals = [ class org/gradle/ShadedJar$1, class org/gradle/api/file/FileVisitDetails, class org/objectweb/asm/ClassReader, class java/io/InputStream, class org/gradle/ShadedJar$ClassDetails, class org/objectweb/asm/ClassWriter, class java/io/File, class java/io/OutputStream ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 9
+          locals = [ class org/gradle/ShadedJar$1, class org/gradle/api/file/FileVisitDetails ]
+          stack = []
+        frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Exception ]
+        frame_type = 33 /* same */
+        frame_type = 251 /* same_frame_extended */
+          offset_delta = 70
+        frame_type = 54 /* same */
+        frame_type = 8 /* same */
+}
+SourceFile: "ShadedJar.java"
+EnclosingMethod: #125.#126              // org.gradle.ShadedJar.analyse
+InnerClasses:
+     #63; //class org/gradle/ShadedJar$1
+     #27; //class org/gradle/ShadedJar$1$1
+     public static #175= #46 of #125; //ClassAnalysisException=class org/gradle/ShadedJar$ClassAnalysisException of class org/gradle/ShadedJar

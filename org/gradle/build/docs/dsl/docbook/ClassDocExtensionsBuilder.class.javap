@@ -1,0 +1,546 @@
+Classfile /home/lptr/Temp/jdk-diff/7u45/org/gradle/build/docs/dsl/docbook/ClassDocExtensionsBuilder.class
+  Last modified Nov 24, 2016; size 7678 bytes
+  MD5 checksum 9594a685d25a89ace7a899c05ff40e8d
+  Compiled from "ClassDocExtensionsBuilder.java"
+public class org.gradle.build.docs.dsl.docbook.ClassDocExtensionsBuilder
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+    #1 = Methodref          #60.#150      // java/lang/Object."<init>":()V
+    #2 = Fieldref           #81.#151      // org/gradle/build/docs/dsl/docbook/ClassDocExtensionsBuilder.model:Lorg/gradle/build/docs/dsl/docbook/DslDocModel;
+    #3 = Fieldref           #81.#152      // org/gradle/build/docs/dsl/docbook/ClassDocExtensionsBuilder.listener:Lorg/gradle/build/docs/dsl/docbook/GenerationListener;
+    #4 = Class              #153          // java/util/HashMap
+    #5 = Methodref          #4.#150       // java/util/HashMap."<init>":()V
+    #6 = Methodref          #43.#154      // org/gradle/build/docs/dsl/docbook/model/ClassDoc.getExtensionMetaData:()Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionMetaData;
+    #7 = Methodref          #155.#156     // org/gradle/build/docs/dsl/docbook/model/ClassExtensionMetaData.getMixinClasses:()Ljava/util/Set;
+    #8 = InterfaceMethodref #157.#158     // java/util/Set.iterator:()Ljava/util/Iterator;
+    #9 = InterfaceMethodref #159.#160     // java/util/Iterator.hasNext:()Z
+   #10 = InterfaceMethodref #159.#161     // java/util/Iterator.next:()Ljava/lang/Object;
+   #11 = Class              #162          // org/gradle/build/docs/dsl/docbook/model/MixinMetaData
+   #12 = Methodref          #11.#163      // org/gradle/build/docs/dsl/docbook/model/MixinMetaData.getPluginId:()Ljava/lang/String;
+   #13 = InterfaceMethodref #164.#165     // java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+   #14 = Class              #166          // org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc
+   #15 = Methodref          #14.#167      // org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc."<init>":(Ljava/lang/String;Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;)V
+   #16 = InterfaceMethodref #164.#168     // java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+   #17 = Methodref          #14.#156      // org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc.getMixinClasses:()Ljava/util/Set;
+   #18 = Methodref          #11.#169      // org/gradle/build/docs/dsl/docbook/model/MixinMetaData.getMixinClass:()Ljava/lang/String;
+   #19 = Methodref          #170.#171     // org/gradle/build/docs/dsl/docbook/DslDocModel.getClassDoc:(Ljava/lang/String;)Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;
+   #20 = InterfaceMethodref #157.#172     // java/util/Set.add:(Ljava/lang/Object;)Z
+   #21 = Methodref          #155.#173     // org/gradle/build/docs/dsl/docbook/model/ClassExtensionMetaData.getExtensionClasses:()Ljava/util/Set;
+   #22 = Class              #174          // org/gradle/build/docs/dsl/docbook/model/ExtensionMetaData
+   #23 = Methodref          #22.#163      // org/gradle/build/docs/dsl/docbook/model/ExtensionMetaData.getPluginId:()Ljava/lang/String;
+   #24 = Methodref          #14.#175      // org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc.getExtensionClasses:()Ljava/util/Map;
+   #25 = Methodref          #22.#176      // org/gradle/build/docs/dsl/docbook/model/ExtensionMetaData.getExtensionId:()Ljava/lang/String;
+   #26 = Methodref          #22.#177      // org/gradle/build/docs/dsl/docbook/model/ExtensionMetaData.getExtensionClass:()Ljava/lang/String;
+   #27 = InterfaceMethodref #164.#178     // java/util/Map.values:()Ljava/util/Collection;
+   #28 = InterfaceMethodref #179.#158     // java/util/Collection.iterator:()Ljava/util/Iterator;
+   #29 = Methodref          #81.#180      // org/gradle/build/docs/dsl/docbook/ClassDocExtensionsBuilder.build:(Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc;)V
+   #30 = Methodref          #43.#181      // org/gradle/build/docs/dsl/docbook/model/ClassDoc.addClassExtension:(Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc;)V
+   #31 = Methodref          #182.#183     // javax/xml/parsers/DocumentBuilderFactory.newInstance:()Ljavax/xml/parsers/DocumentBuilderFactory;
+   #32 = Methodref          #182.#184     // javax/xml/parsers/DocumentBuilderFactory.newDocumentBuilder:()Ljavax/xml/parsers/DocumentBuilder;
+   #33 = Methodref          #185.#186     // javax/xml/parsers/DocumentBuilder.newDocument:()Lorg/w3c/dom/Document;
+   #34 = Class              #187          // javax/xml/parsers/ParserConfigurationException
+   #35 = Methodref          #188.#189     // org/gradle/internal/UncheckedException.throwAsUncheckedException:(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+   #36 = Class              #190          // org/gradle/build/docs/dsl/docbook/LinkRenderer
+   #37 = Methodref          #36.#191      // org/gradle/build/docs/dsl/docbook/LinkRenderer."<init>":(Lorg/w3c/dom/Document;Lorg/gradle/build/docs/dsl/docbook/DslDocModel;)V
+   #38 = InterfaceMethodref #164.#192     // java/util/Map.entrySet:()Ljava/util/Set;
+   #39 = Class              #193          // java/util/Map$Entry
+   #40 = InterfaceMethodref #39.#194      // java/util/Map$Entry.getKey:()Ljava/lang/Object;
+   #41 = Class              #195          // java/lang/String
+   #42 = InterfaceMethodref #39.#196      // java/util/Map$Entry.getValue:()Ljava/lang/Object;
+   #43 = Class              #197          // org/gradle/build/docs/dsl/docbook/model/ClassDoc
+   #44 = Class              #198          // org/gradle/build/docs/dsl/source/model/PropertyMetaData
+   #45 = Methodref          #14.#199      // org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc.getTargetClass:()Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;
+   #46 = Methodref          #43.#200      // org/gradle/build/docs/dsl/docbook/model/ClassDoc.getClassMetaData:()Lorg/gradle/build/docs/dsl/source/model/ClassMetaData;
+   #47 = Methodref          #44.#201      // org/gradle/build/docs/dsl/source/model/PropertyMetaData."<init>":(Ljava/lang/String;Lorg/gradle/build/docs/dsl/source/model/ClassMetaData;)V
+   #48 = Class              #202          // org/gradle/build/docs/dsl/source/model/TypeMetaData
+   #49 = Methodref          #43.#203      // org/gradle/build/docs/dsl/docbook/model/ClassDoc.getName:()Ljava/lang/String;
+   #50 = Methodref          #48.#204      // org/gradle/build/docs/dsl/source/model/TypeMetaData."<init>":(Ljava/lang/String;)V
+   #51 = Methodref          #44.#205      // org/gradle/build/docs/dsl/source/model/PropertyMetaData.setType:(Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;)V
+   #52 = String             #128          // para
+   #53 = InterfaceMethodref #206.#207     // org/w3c/dom/Document.createElement:(Ljava/lang/String;)Lorg/w3c/dom/Element;
+   #54 = String             #208          // The
+   #55 = InterfaceMethodref #206.#209     // org/w3c/dom/Document.createTextNode:(Ljava/lang/String;)Lorg/w3c/dom/Text;
+   #56 = InterfaceMethodref #210.#211     // org/w3c/dom/Element.appendChild:(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
+   #57 = Methodref          #44.#212      // org/gradle/build/docs/dsl/source/model/PropertyMetaData.getType:()Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;
+   #58 = Methodref          #36.#213      // org/gradle/build/docs/dsl/docbook/LinkRenderer.link:(Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;Lorg/gradle/build/docs/dsl/docbook/GenerationListener;)Lorg/w3c/dom/Node;
+   #59 = String             #214          //  added by the %s plugin.
+   #60 = Class              #215          // java/lang/Object
+   #61 = Methodref          #14.#163      // org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc.getPluginId:()Ljava/lang/String;
+   #62 = Methodref          #41.#216      // java/lang/String.format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+   #63 = Class              #217          // org/gradle/build/docs/dsl/docbook/model/PropertyDoc
+   #64 = Methodref          #218.#219     // java/util/Collections.singletonList:(Ljava/lang/Object;)Ljava/util/List;
+   #65 = Methodref          #218.#220     // java/util/Collections.emptyList:()Ljava/util/List;
+   #66 = Methodref          #63.#221      // org/gradle/build/docs/dsl/docbook/model/PropertyDoc."<init>":(Lorg/gradle/build/docs/dsl/source/model/PropertyMetaData;Ljava/util/List;Ljava/util/List;)V
+   #67 = Methodref          #14.#222      // org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc.getExtraProperties:()Ljava/util/List;
+   #68 = InterfaceMethodref #223.#172     // java/util/List.add:(Ljava/lang/Object;)Z
+   #69 = String             #224          // Configures the
+   #70 = Class              #225          // org/gradle/build/docs/dsl/source/model/MethodMetaData
+   #71 = Methodref          #70.#201      // org/gradle/build/docs/dsl/source/model/MethodMetaData."<init>":(Ljava/lang/String;Lorg/gradle/build/docs/dsl/source/model/ClassMetaData;)V
+   #72 = String             #226          // configClosure
+   #73 = Class              #227          // groovy/lang/Closure
+   #74 = Methodref          #228.#229     // java/lang/Class.getName:()Ljava/lang/String;
+   #75 = Methodref          #70.#230      // org/gradle/build/docs/dsl/source/model/MethodMetaData.addParameter:(Ljava/lang/String;Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;)Lorg/gradle/build/docs/dsl/source/model/ParameterMetaData;
+   #76 = Class              #231          // org/gradle/build/docs/dsl/docbook/model/MethodDoc
+   #77 = Methodref          #76.#232      // org/gradle/build/docs/dsl/docbook/model/MethodDoc."<init>":(Lorg/gradle/build/docs/dsl/source/model/MethodMetaData;Ljava/util/List;)V
+   #78 = Methodref          #14.#233      // org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc.getExtraBlocks:()Ljava/util/List;
+   #79 = Class              #234          // org/gradle/build/docs/dsl/docbook/model/BlockDoc
+   #80 = Methodref          #79.#235      // org/gradle/build/docs/dsl/docbook/model/BlockDoc."<init>":(Lorg/gradle/build/docs/dsl/docbook/model/MethodDoc;Lorg/gradle/build/docs/dsl/docbook/model/PropertyDoc;Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;Z)V
+   #81 = Class              #236          // org/gradle/build/docs/dsl/docbook/ClassDocExtensionsBuilder
+   #82 = Utf8               model
+   #83 = Utf8               Lorg/gradle/build/docs/dsl/docbook/DslDocModel;
+   #84 = Utf8               listener
+   #85 = Utf8               Lorg/gradle/build/docs/dsl/docbook/GenerationListener;
+   #86 = Utf8               <init>
+   #87 = Utf8               (Lorg/gradle/build/docs/dsl/docbook/DslDocModel;Lorg/gradle/build/docs/dsl/docbook/GenerationListener;)V
+   #88 = Utf8               Code
+   #89 = Utf8               LineNumberTable
+   #90 = Utf8               LocalVariableTable
+   #91 = Utf8               this
+   #92 = Utf8               Lorg/gradle/build/docs/dsl/docbook/ClassDocExtensionsBuilder;
+   #93 = Utf8               build
+   #94 = Utf8               (Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;)V
+   #95 = Utf8               pluginId
+   #96 = Utf8               Ljava/lang/String;
+   #97 = Utf8               classExtensionDoc
+   #98 = Utf8               Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc;
+   #99 = Utf8               mixin
+  #100 = Utf8               Lorg/gradle/build/docs/dsl/docbook/model/MixinMetaData;
+  #101 = Utf8               i$
+  #102 = Utf8               Ljava/util/Iterator;
+  #103 = Utf8               extension
+  #104 = Utf8               Lorg/gradle/build/docs/dsl/docbook/model/ExtensionMetaData;
+  #105 = Utf8               extensionDoc
+  #106 = Utf8               classDoc
+  #107 = Utf8               Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;
+  #108 = Utf8               plugins
+  #109 = Utf8               Ljava/util/Map;
+  #110 = Utf8               LocalVariableTypeTable
+  #111 = Utf8               Ljava/util/Map<Ljava/lang/String;Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc;>;
+  #112 = Utf8               StackMapTable
+  #113 = Class              #237          // java/util/Map
+  #114 = Class              #238          // java/util/Iterator
+  #115 = Class              #162          // org/gradle/build/docs/dsl/docbook/model/MixinMetaData
+  #116 = Class              #195          // java/lang/String
+  #117 = Class              #166          // org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc
+  #118 = Class              #236          // org/gradle/build/docs/dsl/docbook/ClassDocExtensionsBuilder
+  #119 = Class              #197          // org/gradle/build/docs/dsl/docbook/model/ClassDoc
+  #120 = Class              #174          // org/gradle/build/docs/dsl/docbook/model/ExtensionMetaData
+  #121 = Utf8               (Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc;)V
+  #122 = Utf8               e
+  #123 = Utf8               Ljavax/xml/parsers/ParserConfigurationException;
+  #124 = Utf8               id
+  #125 = Utf8               type
+  #126 = Utf8               propertyMetaData
+  #127 = Utf8               Lorg/gradle/build/docs/dsl/source/model/PropertyMetaData;
+  #128 = Utf8               para
+  #129 = Utf8               Lorg/w3c/dom/Element;
+  #130 = Utf8               propertyDoc
+  #131 = Utf8               Lorg/gradle/build/docs/dsl/docbook/model/PropertyDoc;
+  #132 = Utf8               methodMetaData
+  #133 = Utf8               Lorg/gradle/build/docs/dsl/source/model/MethodMetaData;
+  #134 = Utf8               methodDoc
+  #135 = Utf8               Lorg/gradle/build/docs/dsl/docbook/model/MethodDoc;
+  #136 = Utf8               entry
+  #137 = Utf8               Entry
+  #138 = Utf8               InnerClasses
+  #139 = Utf8               Ljava/util/Map$Entry;
+  #140 = Utf8               doc
+  #141 = Utf8               Lorg/w3c/dom/Document;
+  #142 = Utf8               linkRenderer
+  #143 = Utf8               Lorg/gradle/build/docs/dsl/docbook/LinkRenderer;
+  #144 = Utf8               Ljava/util/Map$Entry<Ljava/lang/String;Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;>;
+  #145 = Class              #187          // javax/xml/parsers/ParserConfigurationException
+  #146 = Class              #239          // org/w3c/dom/Document
+  #147 = Class              #190          // org/gradle/build/docs/dsl/docbook/LinkRenderer
+  #148 = Utf8               SourceFile
+  #149 = Utf8               ClassDocExtensionsBuilder.java
+  #150 = NameAndType        #86:#240      // "<init>":()V
+  #151 = NameAndType        #82:#83       // model:Lorg/gradle/build/docs/dsl/docbook/DslDocModel;
+  #152 = NameAndType        #84:#85       // listener:Lorg/gradle/build/docs/dsl/docbook/GenerationListener;
+  #153 = Utf8               java/util/HashMap
+  #154 = NameAndType        #241:#242     // getExtensionMetaData:()Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionMetaData;
+  #155 = Class              #243          // org/gradle/build/docs/dsl/docbook/model/ClassExtensionMetaData
+  #156 = NameAndType        #244:#245     // getMixinClasses:()Ljava/util/Set;
+  #157 = Class              #246          // java/util/Set
+  #158 = NameAndType        #247:#248     // iterator:()Ljava/util/Iterator;
+  #159 = Class              #238          // java/util/Iterator
+  #160 = NameAndType        #249:#250     // hasNext:()Z
+  #161 = NameAndType        #251:#252     // next:()Ljava/lang/Object;
+  #162 = Utf8               org/gradle/build/docs/dsl/docbook/model/MixinMetaData
+  #163 = NameAndType        #253:#254     // getPluginId:()Ljava/lang/String;
+  #164 = Class              #237          // java/util/Map
+  #165 = NameAndType        #255:#256     // get:(Ljava/lang/Object;)Ljava/lang/Object;
+  #166 = Utf8               org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc
+  #167 = NameAndType        #86:#257      // "<init>":(Ljava/lang/String;Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;)V
+  #168 = NameAndType        #258:#259     // put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #169 = NameAndType        #260:#254     // getMixinClass:()Ljava/lang/String;
+  #170 = Class              #261          // org/gradle/build/docs/dsl/docbook/DslDocModel
+  #171 = NameAndType        #262:#263     // getClassDoc:(Ljava/lang/String;)Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;
+  #172 = NameAndType        #264:#265     // add:(Ljava/lang/Object;)Z
+  #173 = NameAndType        #266:#245     // getExtensionClasses:()Ljava/util/Set;
+  #174 = Utf8               org/gradle/build/docs/dsl/docbook/model/ExtensionMetaData
+  #175 = NameAndType        #266:#267     // getExtensionClasses:()Ljava/util/Map;
+  #176 = NameAndType        #268:#254     // getExtensionId:()Ljava/lang/String;
+  #177 = NameAndType        #269:#254     // getExtensionClass:()Ljava/lang/String;
+  #178 = NameAndType        #270:#271     // values:()Ljava/util/Collection;
+  #179 = Class              #272          // java/util/Collection
+  #180 = NameAndType        #93:#121      // build:(Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc;)V
+  #181 = NameAndType        #273:#121     // addClassExtension:(Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc;)V
+  #182 = Class              #274          // javax/xml/parsers/DocumentBuilderFactory
+  #183 = NameAndType        #275:#276     // newInstance:()Ljavax/xml/parsers/DocumentBuilderFactory;
+  #184 = NameAndType        #277:#278     // newDocumentBuilder:()Ljavax/xml/parsers/DocumentBuilder;
+  #185 = Class              #279          // javax/xml/parsers/DocumentBuilder
+  #186 = NameAndType        #280:#281     // newDocument:()Lorg/w3c/dom/Document;
+  #187 = Utf8               javax/xml/parsers/ParserConfigurationException
+  #188 = Class              #282          // org/gradle/internal/UncheckedException
+  #189 = NameAndType        #283:#284     // throwAsUncheckedException:(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+  #190 = Utf8               org/gradle/build/docs/dsl/docbook/LinkRenderer
+  #191 = NameAndType        #86:#285      // "<init>":(Lorg/w3c/dom/Document;Lorg/gradle/build/docs/dsl/docbook/DslDocModel;)V
+  #192 = NameAndType        #286:#245     // entrySet:()Ljava/util/Set;
+  #193 = Utf8               java/util/Map$Entry
+  #194 = NameAndType        #287:#252     // getKey:()Ljava/lang/Object;
+  #195 = Utf8               java/lang/String
+  #196 = NameAndType        #288:#252     // getValue:()Ljava/lang/Object;
+  #197 = Utf8               org/gradle/build/docs/dsl/docbook/model/ClassDoc
+  #198 = Utf8               org/gradle/build/docs/dsl/source/model/PropertyMetaData
+  #199 = NameAndType        #289:#290     // getTargetClass:()Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;
+  #200 = NameAndType        #291:#292     // getClassMetaData:()Lorg/gradle/build/docs/dsl/source/model/ClassMetaData;
+  #201 = NameAndType        #86:#293      // "<init>":(Ljava/lang/String;Lorg/gradle/build/docs/dsl/source/model/ClassMetaData;)V
+  #202 = Utf8               org/gradle/build/docs/dsl/source/model/TypeMetaData
+  #203 = NameAndType        #294:#254     // getName:()Ljava/lang/String;
+  #204 = NameAndType        #86:#295      // "<init>":(Ljava/lang/String;)V
+  #205 = NameAndType        #296:#297     // setType:(Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;)V
+  #206 = Class              #239          // org/w3c/dom/Document
+  #207 = NameAndType        #298:#299     // createElement:(Ljava/lang/String;)Lorg/w3c/dom/Element;
+  #208 = Utf8               The
+  #209 = NameAndType        #300:#301     // createTextNode:(Ljava/lang/String;)Lorg/w3c/dom/Text;
+  #210 = Class              #302          // org/w3c/dom/Element
+  #211 = NameAndType        #303:#304     // appendChild:(Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
+  #212 = NameAndType        #305:#306     // getType:()Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;
+  #213 = NameAndType        #307:#308     // link:(Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;Lorg/gradle/build/docs/dsl/docbook/GenerationListener;)Lorg/w3c/dom/Node;
+  #214 = Utf8                added by the %s plugin.
+  #215 = Utf8               java/lang/Object
+  #216 = NameAndType        #309:#310     // format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+  #217 = Utf8               org/gradle/build/docs/dsl/docbook/model/PropertyDoc
+  #218 = Class              #311          // java/util/Collections
+  #219 = NameAndType        #312:#313     // singletonList:(Ljava/lang/Object;)Ljava/util/List;
+  #220 = NameAndType        #314:#315     // emptyList:()Ljava/util/List;
+  #221 = NameAndType        #86:#316      // "<init>":(Lorg/gradle/build/docs/dsl/source/model/PropertyMetaData;Ljava/util/List;Ljava/util/List;)V
+  #222 = NameAndType        #317:#315     // getExtraProperties:()Ljava/util/List;
+  #223 = Class              #318          // java/util/List
+  #224 = Utf8               Configures the
+  #225 = Utf8               org/gradle/build/docs/dsl/source/model/MethodMetaData
+  #226 = Utf8               configClosure
+  #227 = Utf8               groovy/lang/Closure
+  #228 = Class              #319          // java/lang/Class
+  #229 = NameAndType        #294:#254     // getName:()Ljava/lang/String;
+  #230 = NameAndType        #320:#321     // addParameter:(Ljava/lang/String;Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;)Lorg/gradle/build/docs/dsl/source/model/ParameterMetaData;
+  #231 = Utf8               org/gradle/build/docs/dsl/docbook/model/MethodDoc
+  #232 = NameAndType        #86:#322      // "<init>":(Lorg/gradle/build/docs/dsl/source/model/MethodMetaData;Ljava/util/List;)V
+  #233 = NameAndType        #323:#315     // getExtraBlocks:()Ljava/util/List;
+  #234 = Utf8               org/gradle/build/docs/dsl/docbook/model/BlockDoc
+  #235 = NameAndType        #86:#324      // "<init>":(Lorg/gradle/build/docs/dsl/docbook/model/MethodDoc;Lorg/gradle/build/docs/dsl/docbook/model/PropertyDoc;Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;Z)V
+  #236 = Utf8               org/gradle/build/docs/dsl/docbook/ClassDocExtensionsBuilder
+  #237 = Utf8               java/util/Map
+  #238 = Utf8               java/util/Iterator
+  #239 = Utf8               org/w3c/dom/Document
+  #240 = Utf8               ()V
+  #241 = Utf8               getExtensionMetaData
+  #242 = Utf8               ()Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionMetaData;
+  #243 = Utf8               org/gradle/build/docs/dsl/docbook/model/ClassExtensionMetaData
+  #244 = Utf8               getMixinClasses
+  #245 = Utf8               ()Ljava/util/Set;
+  #246 = Utf8               java/util/Set
+  #247 = Utf8               iterator
+  #248 = Utf8               ()Ljava/util/Iterator;
+  #249 = Utf8               hasNext
+  #250 = Utf8               ()Z
+  #251 = Utf8               next
+  #252 = Utf8               ()Ljava/lang/Object;
+  #253 = Utf8               getPluginId
+  #254 = Utf8               ()Ljava/lang/String;
+  #255 = Utf8               get
+  #256 = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+  #257 = Utf8               (Ljava/lang/String;Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;)V
+  #258 = Utf8               put
+  #259 = Utf8               (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #260 = Utf8               getMixinClass
+  #261 = Utf8               org/gradle/build/docs/dsl/docbook/DslDocModel
+  #262 = Utf8               getClassDoc
+  #263 = Utf8               (Ljava/lang/String;)Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;
+  #264 = Utf8               add
+  #265 = Utf8               (Ljava/lang/Object;)Z
+  #266 = Utf8               getExtensionClasses
+  #267 = Utf8               ()Ljava/util/Map;
+  #268 = Utf8               getExtensionId
+  #269 = Utf8               getExtensionClass
+  #270 = Utf8               values
+  #271 = Utf8               ()Ljava/util/Collection;
+  #272 = Utf8               java/util/Collection
+  #273 = Utf8               addClassExtension
+  #274 = Utf8               javax/xml/parsers/DocumentBuilderFactory
+  #275 = Utf8               newInstance
+  #276 = Utf8               ()Ljavax/xml/parsers/DocumentBuilderFactory;
+  #277 = Utf8               newDocumentBuilder
+  #278 = Utf8               ()Ljavax/xml/parsers/DocumentBuilder;
+  #279 = Utf8               javax/xml/parsers/DocumentBuilder
+  #280 = Utf8               newDocument
+  #281 = Utf8               ()Lorg/w3c/dom/Document;
+  #282 = Utf8               org/gradle/internal/UncheckedException
+  #283 = Utf8               throwAsUncheckedException
+  #284 = Utf8               (Ljava/lang/Throwable;)Ljava/lang/RuntimeException;
+  #285 = Utf8               (Lorg/w3c/dom/Document;Lorg/gradle/build/docs/dsl/docbook/DslDocModel;)V
+  #286 = Utf8               entrySet
+  #287 = Utf8               getKey
+  #288 = Utf8               getValue
+  #289 = Utf8               getTargetClass
+  #290 = Utf8               ()Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;
+  #291 = Utf8               getClassMetaData
+  #292 = Utf8               ()Lorg/gradle/build/docs/dsl/source/model/ClassMetaData;
+  #293 = Utf8               (Ljava/lang/String;Lorg/gradle/build/docs/dsl/source/model/ClassMetaData;)V
+  #294 = Utf8               getName
+  #295 = Utf8               (Ljava/lang/String;)V
+  #296 = Utf8               setType
+  #297 = Utf8               (Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;)V
+  #298 = Utf8               createElement
+  #299 = Utf8               (Ljava/lang/String;)Lorg/w3c/dom/Element;
+  #300 = Utf8               createTextNode
+  #301 = Utf8               (Ljava/lang/String;)Lorg/w3c/dom/Text;
+  #302 = Utf8               org/w3c/dom/Element
+  #303 = Utf8               appendChild
+  #304 = Utf8               (Lorg/w3c/dom/Node;)Lorg/w3c/dom/Node;
+  #305 = Utf8               getType
+  #306 = Utf8               ()Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;
+  #307 = Utf8               link
+  #308 = Utf8               (Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;Lorg/gradle/build/docs/dsl/docbook/GenerationListener;)Lorg/w3c/dom/Node;
+  #309 = Utf8               format
+  #310 = Utf8               (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+  #311 = Utf8               java/util/Collections
+  #312 = Utf8               singletonList
+  #313 = Utf8               (Ljava/lang/Object;)Ljava/util/List;
+  #314 = Utf8               emptyList
+  #315 = Utf8               ()Ljava/util/List;
+  #316 = Utf8               (Lorg/gradle/build/docs/dsl/source/model/PropertyMetaData;Ljava/util/List;Ljava/util/List;)V
+  #317 = Utf8               getExtraProperties
+  #318 = Utf8               java/util/List
+  #319 = Utf8               java/lang/Class
+  #320 = Utf8               addParameter
+  #321 = Utf8               (Ljava/lang/String;Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;)Lorg/gradle/build/docs/dsl/source/model/ParameterMetaData;
+  #322 = Utf8               (Lorg/gradle/build/docs/dsl/source/model/MethodMetaData;Ljava/util/List;)V
+  #323 = Utf8               getExtraBlocks
+  #324 = Utf8               (Lorg/gradle/build/docs/dsl/docbook/model/MethodDoc;Lorg/gradle/build/docs/dsl/docbook/model/PropertyDoc;Lorg/gradle/build/docs/dsl/source/model/TypeMetaData;Z)V
+{
+  public org.gradle.build.docs.dsl.docbook.ClassDocExtensionsBuilder(org.gradle.build.docs.dsl.docbook.DslDocModel, org.gradle.build.docs.dsl.docbook.GenerationListener);
+    descriptor: (Lorg/gradle/build/docs/dsl/docbook/DslDocModel;Lorg/gradle/build/docs/dsl/docbook/GenerationListener;)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=3
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: aload_1
+         6: putfield      #2                  // Field model:Lorg/gradle/build/docs/dsl/docbook/DslDocModel;
+         9: aload_0
+        10: aload_2
+        11: putfield      #3                  // Field listener:Lorg/gradle/build/docs/dsl/docbook/GenerationListener;
+        14: return
+      LineNumberTable:
+        line 38: 0
+        line 39: 4
+        line 40: 9
+        line 41: 14
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      15     0  this   Lorg/gradle/build/docs/dsl/docbook/ClassDocExtensionsBuilder;
+            0      15     1 model   Lorg/gradle/build/docs/dsl/docbook/DslDocModel;
+            0      15     2 listener   Lorg/gradle/build/docs/dsl/docbook/GenerationListener;
+
+  public void build(org.gradle.build.docs.dsl.docbook.model.ClassDoc);
+    descriptor: (Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;)V
+    flags: ACC_PUBLIC
+    Code:
+      stack=4, locals=7, args_size=2
+         0: new           #4                  // class java/util/HashMap
+         3: dup
+         4: invokespecial #5                  // Method java/util/HashMap."<init>":()V
+         7: astore_2
+         8: aload_1
+         9: invokevirtual #6                  // Method org/gradle/build/docs/dsl/docbook/model/ClassDoc.getExtensionMetaData:()Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionMetaData;
+        12: invokevirtual #7                  // Method org/gradle/build/docs/dsl/docbook/model/ClassExtensionMetaData.getMixinClasses:()Ljava/util/Set;
+        15: invokeinterface #8,  1            // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+        20: astore_3
+        21: aload_3
+        22: invokeinterface #9,  1            // InterfaceMethod java/util/Iterator.hasNext:()Z
+        27: ifeq          115
+        30: aload_3
+        31: invokeinterface #10,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        36: checkcast     #11                 // class org/gradle/build/docs/dsl/docbook/model/MixinMetaData
+        39: astore        4
+        41: aload         4
+        43: invokevirtual #12                 // Method org/gradle/build/docs/dsl/docbook/model/MixinMetaData.getPluginId:()Ljava/lang/String;
+        46: astore        5
+        48: aload_2
+        49: aload         5
+        51: invokeinterface #13,  2           // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        56: checkcast     #14                 // class org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc
+        59: astore        6
+        61: aload         6
+        63: ifnonnull     89
+        66: new           #14                 // class org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc
+        69: dup
+        70: aload         5
+        72: aload_1
+        73: invokespecial #15                 // Method org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc."<init>":(Ljava/lang/String;Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;)V
+        76: astore        6
+        78: aload_2
+        79: aload         5
+        81: aload         6
+        83: invokeinterface #16,  3           // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        88: pop
+        89: aload         6
+        91: invokevirtual #17                 // Method org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc.getMixinClasses:()Ljava/util/Set;
+        94: aload_0
+        95: getfield      #2                  // Field model:Lorg/gradle/build/docs/dsl/docbook/DslDocModel;
+        98: aload         4
+       100: invokevirtual #18                 // Method org/gradle/build/docs/dsl/docbook/model/MixinMetaData.getMixinClass:()Ljava/lang/String;
+       103: invokevirtual #19                 // Method org/gradle/build/docs/dsl/docbook/DslDocModel.getClassDoc:(Ljava/lang/String;)Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;
+       106: invokeinterface #20,  2           // InterfaceMethod java/util/Set.add:(Ljava/lang/Object;)Z
+       111: pop
+       112: goto          21
+       115: aload_1
+       116: invokevirtual #6                  // Method org/gradle/build/docs/dsl/docbook/model/ClassDoc.getExtensionMetaData:()Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionMetaData;
+       119: invokevirtual #21                 // Method org/gradle/build/docs/dsl/docbook/model/ClassExtensionMetaData.getExtensionClasses:()Ljava/util/Set;
+       122: invokeinterface #8,  1            // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+       127: astore_3
+       128: aload_3
+       129: invokeinterface #9,  1            // InterfaceMethod java/util/Iterator.hasNext:()Z
+       134: ifeq          227
+       137: aload_3
+       138: invokeinterface #10,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       143: checkcast     #22                 // class org/gradle/build/docs/dsl/docbook/model/ExtensionMetaData
+       146: astore        4
+       148: aload         4
+       150: invokevirtual #23                 // Method org/gradle/build/docs/dsl/docbook/model/ExtensionMetaData.getPluginId:()Ljava/lang/String;
+       153: astore        5
+       155: aload_2
+       156: aload         5
+       158: invokeinterface #13,  2           // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+       163: checkcast     #14                 // class org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc
+       166: astore        6
+       168: aload         6
+       170: ifnonnull     196
+       173: new           #14                 // class org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc
+       176: dup
+       177: aload         5
+       179: aload_1
+       180: invokespecial #15                 // Method org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc."<init>":(Ljava/lang/String;Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;)V
+       183: astore        6
+       185: aload_2
+       186: aload         5
+       188: aload         6
+       190: invokeinterface #16,  3           // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+       195: pop
+       196: aload         6
+       198: invokevirtual #24                 // Method org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc.getExtensionClasses:()Ljava/util/Map;
+       201: aload         4
+       203: invokevirtual #25                 // Method org/gradle/build/docs/dsl/docbook/model/ExtensionMetaData.getExtensionId:()Ljava/lang/String;
+       206: aload_0
+       207: getfield      #2                  // Field model:Lorg/gradle/build/docs/dsl/docbook/DslDocModel;
+       210: aload         4
+       212: invokevirtual #26                 // Method org/gradle/build/docs/dsl/docbook/model/ExtensionMetaData.getExtensionClass:()Ljava/lang/String;
+       215: invokevirtual #19                 // Method org/gradle/build/docs/dsl/docbook/DslDocModel.getClassDoc:(Ljava/lang/String;)Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;
+       218: invokeinterface #16,  3           // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+       223: pop
+       224: goto          128
+       227: aload_2
+       228: invokeinterface #27,  1           // InterfaceMethod java/util/Map.values:()Ljava/util/Collection;
+       233: invokeinterface #28,  1           // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+       238: astore_3
+       239: aload_3
+       240: invokeinterface #9,  1            // InterfaceMethod java/util/Iterator.hasNext:()Z
+       245: ifeq          274
+       248: aload_3
+       249: invokeinterface #10,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+       254: checkcast     #14                 // class org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc
+       257: astore        4
+       259: aload_0
+       260: aload         4
+       262: invokespecial #29                 // Method build:(Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc;)V
+       265: aload_1
+       266: aload         4
+       268: invokevirtual #30                 // Method org/gradle/build/docs/dsl/docbook/model/ClassDoc.addClassExtension:(Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc;)V
+       271: goto          239
+       274: return
+      LineNumberTable:
+        line 47: 0
+        line 48: 8
+        line 49: 41
+        line 50: 48
+        line 51: 61
+        line 52: 66
+        line 53: 78
+        line 55: 89
+        line 56: 112
+        line 57: 115
+        line 58: 148
+        line 59: 155
+        line 60: 168
+        line 61: 173
+        line 62: 185
+        line 64: 196
+        line 65: 224
+        line 66: 227
+        line 67: 259
+        line 68: 265
+        line 69: 271
+        line 70: 274
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           48      64     5 pluginId   Ljava/lang/String;
+           61      51     6 classExtensionDoc   Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc;
+           41      71     4 mixin   Lorg/gradle/build/docs/dsl/docbook/model/MixinMetaData;
+           21      94     3    i$   Ljava/util/Iterator;
+          155      69     5 pluginId   Ljava/lang/String;
+          168      56     6 classExtensionDoc   Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc;
+          148      76     4 extension   Lorg/gradle/build/docs/dsl/docbook/model/ExtensionMetaData;
+          128      99     3    i$   Ljava/util/Iterator;
+          259      12     4 extensionDoc   Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc;
+          239      35     3    i$   Ljava/util/Iterator;
+            0     275     0  this   Lorg/gradle/build/docs/dsl/docbook/ClassDocExtensionsBuilder;
+            0     275     1 classDoc   Lorg/gradle/build/docs/dsl/docbook/model/ClassDoc;
+            8     267     2 plugins   Ljava/util/Map;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            8     267     2 plugins   Ljava/util/Map<Ljava/lang/String;Lorg/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc;>;
+      StackMapTable: number_of_entries = 8
+        frame_type = 253 /* append */
+          offset_delta = 21
+          locals = [ class java/util/Map, class java/util/Iterator ]
+        frame_type = 254 /* append */
+          offset_delta = 67
+          locals = [ class org/gradle/build/docs/dsl/docbook/model/MixinMetaData, class java/lang/String, class org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 25
+          locals = [ class org/gradle/build/docs/dsl/docbook/ClassDocExtensionsBuilder, class org/gradle/build/docs/dsl/docbook/model/ClassDoc, class java/util/Map ]
+          stack = []
+        frame_type = 252 /* append */
+          offset_delta = 12
+          locals = [ class java/util/Iterator ]
+        frame_type = 254 /* append */
+          offset_delta = 67
+          locals = [ class org/gradle/build/docs/dsl/docbook/model/ExtensionMetaData, class java/lang/String, class org/gradle/build/docs/dsl/docbook/model/ClassExtensionDoc ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 30
+          locals = [ class org/gradle/build/docs/dsl/docbook/ClassDocExtensionsBuilder, class org/gradle/build/docs/dsl/docbook/model/ClassDoc, class java/util/Map ]
+          stack = []
+        frame_type = 252 /* append */
+          offset_delta = 11
+          locals = [ class java/util/Iterator ]
+        frame_type = 250 /* chop */
+          offset_delta = 34
+}
+SourceFile: "ClassDocExtensionsBuilder.java"
+InnerClasses:
+     public static #137= #39 of #164; //Entry=class java/util/Map$Entry of class java/util/Map
