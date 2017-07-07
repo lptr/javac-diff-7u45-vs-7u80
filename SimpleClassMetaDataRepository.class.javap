@@ -1,0 +1,740 @@
+Classfile /home/lptr/Temp/jdk-diff/7u45/org/gradle/build/docs/model/SimpleClassMetaDataRepository.class
+  Last modified Nov 24, 2016; size 6114 bytes
+  MD5 checksum a83b1dc7a257186856b739cc9f4b53fc
+  Compiled from "SimpleClassMetaDataRepository.java"
+public class org.gradle.build.docs.model.SimpleClassMetaDataRepository<T extends org.gradle.build.docs.model.Attachable<T>> extends java.lang.Object implements org.gradle.build.docs.model.ClassMetaDataRepository<T>
+  Signature: #NNN                         // <T::Lorg/gradle/build/docs/model/Attachable<TT;>;>Ljava/lang/Object;Lorg/gradle/build/docs/model/ClassMetaDataRepository<TT;>;
+  SourceFile: "SimpleClassMetaDataRepository.java"
+  InnerClasses:
+       public static #NNN= #NNN of #NNN; //Entry=class java/util/Map$Entry of class java/util/Map
+  minor version: 0
+  major version: 51
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+    #NNN = Methodref          #NNN.#NNN      //  java/lang/Object."<init>":()V
+    #NNN = Class              #NNN          //  java/util/HashMap
+    #NNN = Methodref          #NNN.#NNN       //  java/util/HashMap."<init>":()V
+    #NNN = Fieldref           #NNN.#NNN      //  org/gradle/build/docs/model/SimpleClassMetaDataRepository.classes:Ljava/util/Map;
+    #NNN = Class              #NNN          //  java/io/FileInputStream
+    #NNN = Methodref          #NNN.#NNN       //  java/io/FileInputStream."<init>":(Ljava/io/File;)V
+    #NNN = Class              #NNN          //  java/io/ObjectInputStream
+    #NNN = Class              #NNN          //  java/io/BufferedInputStream
+    #NNN = Methodref          #NNN.#NNN       //  java/io/BufferedInputStream."<init>":(Ljava/io/InputStream;)V
+   #NNN = Methodref          #NNN.#NNN       //  java/io/ObjectInputStream."<init>":(Ljava/io/InputStream;)V
+   #NNN = InterfaceMethodref #NNN.#NNN      //  java/util/Map.clear:()V
+   #NNN = Methodref          #NNN.#NNN       //  java/io/ObjectInputStream.readObject:()Ljava/lang/Object;
+   #NNN = Class              #NNN          //  java/util/Map
+   #NNN = InterfaceMethodref #NNN.#NNN      //  java/util/Map.putAll:(Ljava/util/Map;)V
+   #NNN = Methodref          #NNN.#NNN       //  java/io/FileInputStream.close:()V
+   #NNN = Class              #NNN          //  java/lang/Exception
+   #NNN = Class              #NNN          //  org/gradle/api/GradleException
+   #NNN = String             #NNN          //  Could not load meta-data from %s.
+   #NNN = Class              #NNN          //  java/lang/Object
+   #NNN = Methodref          #NNN.#NNN      //  java/lang/String.format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+   #NNN = Methodref          #NNN.#NNN      //  org/gradle/api/GradleException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+   #NNN = Class              #NNN          //  java/io/FileOutputStream
+   #NNN = Methodref          #NNN.#NNN      //  java/io/FileOutputStream."<init>":(Ljava/io/File;)V
+   #NNN = Class              #NNN          //  java/io/ObjectOutputStream
+   #NNN = Class              #NNN          //  java/io/BufferedOutputStream
+   #NNN = Methodref          #NNN.#NNN      //  java/io/BufferedOutputStream."<init>":(Ljava/io/OutputStream;)V
+   #NNN = Methodref          #NNN.#NNN      //  java/io/ObjectOutputStream."<init>":(Ljava/io/OutputStream;)V
+   #NNN = Methodref          #NNN.#NNN      //  java/io/ObjectOutputStream.writeObject:(Ljava/lang/Object;)V
+   #NNN = Methodref          #NNN.#NNN      //  java/io/ObjectOutputStream.close:()V
+   #NNN = Methodref          #NNN.#NNN      //  java/io/FileOutputStream.close:()V
+   #NNN = Class              #NNN          //  java/io/IOException
+   #NNN = String             #NNN          //  Could not write meta-data to %s.
+   #NNN = Methodref          #NNN.#NNN      //  org/gradle/build/docs/model/SimpleClassMetaDataRepository.find:(Ljava/lang/String;)Lorg/gradle/build/docs/model/Attachable;
+   #NNN = Class              #NNN          //  org/gradle/api/UnknownDomainObjectException
+   #NNN = String             #NNN          //  No meta-data is available for class '%s'. Did you mean? %s
+   #NNN = Methodref          #NNN.#NNN      //  org/gradle/build/docs/model/SimpleClassMetaDataRepository.findPossibleMatches:(Ljava/lang/String;)Ljava/util/List;
+   #NNN = Methodref          #NNN.#NNN      //  org/gradle/api/UnknownDomainObjectException."<init>":(Ljava/lang/String;)V
+   #NNN = InterfaceMethodref #NNN.#NNN      //  java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+   #NNN = Class              #NNN          //  org/gradle/build/docs/model/Attachable
+   #NNN = InterfaceMethodref #NNN.#NNN      //  org/gradle/build/docs/model/Attachable.attach:(Lorg/gradle/build/docs/model/ClassMetaDataRepository;)V
+   #NNN = Class              #NNN          //  java/util/ArrayList
+   #NNN = Methodref          #NNN.#NNN      //  java/util/ArrayList."<init>":()V
+   #NNN = InterfaceMethodref #NNN.#NNN      //  java/util/Map.keySet:()Ljava/util/Set;
+   #NNN = InterfaceMethodref #NNN.#NNN     //  java/util/Set.iterator:()Ljava/util/Iterator;
+   #NNN = InterfaceMethodref #NNN.#NNN     //  java/util/Iterator.hasNext:()Z
+   #NNN = InterfaceMethodref #NNN.#NNN     //  java/util/Iterator.next:()Ljava/lang/Object;
+   #NNN = Class              #NNN          //  java/lang/String
+   #NNN = Methodref          #NNN.#NNN     //  org/apache/commons/lang/StringUtils.getLevenshteinDistance:(Ljava/lang/String;Ljava/lang/String;)I
+   #NNN = InterfaceMethodref #NNN.#NNN     //  java/util/List.add:(Ljava/lang/Object;)Z
+   #NNN = InterfaceMethodref #NNN.#NNN      //  java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+   #NNN = InterfaceMethodref #NNN.#NNN      //  java/util/Map.entrySet:()Ljava/util/Set;
+   #NNN = Class              #NNN          //  java/util/Map$Entry
+   #NNN = InterfaceMethodref #NNN.#NNN      //  java/util/Map$Entry.getKey:()Ljava/lang/Object;
+   #NNN = InterfaceMethodref #NNN.#NNN      //  java/util/Map$Entry.getValue:()Ljava/lang/Object;
+   #NNN = Methodref          #NNN.#NNN     //  groovy/lang/Closure.call:([Ljava/lang/Object;)Ljava/lang/Object;
+   #NNN = InterfaceMethodref #NNN.#NNN      //  java/util/Map.values:()Ljava/util/Collection;
+   #NNN = InterfaceMethodref #NNN.#NNN     //  java/util/Collection.iterator:()Ljava/util/Iterator;
+   #NNN = InterfaceMethodref #NNN.#NNN     //  org/gradle/api/Action.execute:(Ljava/lang/Object;)V
+   #NNN = Methodref          #NNN.#NNN      //  org/gradle/build/docs/model/SimpleClassMetaDataRepository.put:(Ljava/lang/String;Lorg/gradle/build/docs/model/Attachable;)V
+   #NNN = Methodref          #NNN.#NNN      //  org/gradle/build/docs/model/SimpleClassMetaDataRepository.get:(Ljava/lang/String;)Lorg/gradle/build/docs/model/Attachable;
+   #NNN = Class              #NNN          //  org/gradle/build/docs/model/SimpleClassMetaDataRepository
+   #NNN = Class              #NNN          //  org/gradle/build/docs/model/ClassMetaDataRepository
+   #NNN = Utf8               classes
+   #NNN = Utf8               Ljava/util/Map;
+   #NNN = Utf8               Signature
+   #NNN = Utf8               Ljava/util/Map<Ljava/lang/String;TT;>;
+   #NNN = Utf8               <init>
+   #NNN = Utf8               ()V
+   #NNN = Utf8               Code
+   #NNN = Utf8               LineNumberTable
+   #NNN = Utf8               LocalVariableTable
+   #NNN = Utf8               this
+   #NNN = Utf8               Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository;
+   #NNN = Utf8               LocalVariableTypeTable
+   #NNN = Utf8               Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository<TT;>;
+   #NNN = Utf8               load
+   #NNN = Utf8               (Ljava/io/File;)V
+   #NNN = Utf8               objInputStream
+   #NNN = Utf8               Ljava/io/ObjectInputStream;
+   #NNN = Utf8               inputStream
+   #NNN = Utf8               Ljava/io/FileInputStream;
+   #NNN = Utf8               e
+   #NNN = Utf8               Ljava/lang/Exception;
+   #NNN = Utf8               repoFile
+   #NNN = Utf8               Ljava/io/File;
+   #NNN = Utf8               StackMapTable
+   #NNN = Class              #NNN          //  org/gradle/build/docs/model/SimpleClassMetaDataRepository
+   #NNN = Class              #NNN          //  java/io/File
+   #NNN = Class              #NNN          //  java/io/FileInputStream
+   #NNN = Class              #NNN          //  java/lang/Throwable
+   #NNN = Class              #NNN          //  java/lang/Exception
+   #NNN = Utf8               store
+   #NNN = Utf8               objOutputStream
+   #NNN = Utf8               Ljava/io/ObjectOutputStream;
+   #NNN = Utf8               outputStream
+   #NNN = Utf8               Ljava/io/FileOutputStream;
+   #NNN = Utf8               Ljava/io/IOException;
+   #NNN = Class              #NNN          //  java/io/FileOutputStream
+   #NNN = Class              #NNN          //  java/io/IOException
+  #NNN = Utf8               get
+  #NNN = Utf8               (Ljava/lang/String;)Lorg/gradle/build/docs/model/Attachable;
+  #NNN = Utf8               fullyQualifiedClassName
+  #NNN = Utf8               Ljava/lang/String;
+  #NNN = Utf8               t
+  #NNN = Utf8               Lorg/gradle/build/docs/model/Attachable;
+  #NNN = Utf8               TT;
+  #NNN = Class              #NNN          //  org/gradle/build/docs/model/Attachable
+  #NNN = Utf8               (Ljava/lang/String;)TT;
+  #NNN = Utf8               find
+  #NNN = Utf8               findPossibleMatches
+  #NNN = Utf8               (Ljava/lang/String;)Ljava/util/List;
+  #NNN = Utf8               className
+  #NNN = Utf8               i$
+  #NNN = Utf8               Ljava/util/Iterator;
+  #NNN = Utf8               candidates
+  #NNN = Utf8               Ljava/util/List;
+  #NNN = Utf8               Ljava/util/List<Ljava/lang/String;>;
+  #NNN = Class              #NNN          //  java/util/List
+  #NNN = Class              #NNN          //  java/util/Iterator
+  #NNN = Utf8               (Ljava/lang/String;)Ljava/util/List<Ljava/lang/String;>;
+  #NNN = Utf8               put
+  #NNN = Utf8               (Ljava/lang/String;Lorg/gradle/build/docs/model/Attachable;)V
+  #NNN = Utf8               metaData
+  #NNN = Utf8               (Ljava/lang/String;TT;)V
+  #NNN = Utf8               each
+  #NNN = Utf8               (Lgroovy/lang/Closure;)V
+  #NNN = Utf8               entry
+  #NNN = Utf8               Entry
+  #NNN = Utf8               InnerClasses
+  #NNN = Utf8               Ljava/util/Map$Entry;
+  #NNN = Utf8               cl
+  #NNN = Utf8               Lgroovy/lang/Closure;
+  #NNN = Utf8               Ljava/util/Map$Entry<Ljava/lang/String;TT;>;
+  #NNN = Utf8               (Lorg/gradle/api/Action;)V
+  #NNN = Utf8               action
+  #NNN = Utf8               Lorg/gradle/api/Action;
+  #NNN = Utf8               Lorg/gradle/api/Action<-TT;>;
+  #NNN = Utf8               (Lorg/gradle/api/Action<-TT;>;)V
+  #NNN = Utf8               (Ljava/lang/String;Ljava/lang/Object;)V
+  #NNN = Utf8               x0
+  #NNN = Utf8               x1
+  #NNN = Utf8               Ljava/lang/Object;
+  #NNN = Utf8               (Ljava/lang/String;)Ljava/lang/Object;
+  #NNN = Utf8               Exceptions
+  #NNN = Utf8               <T::Lorg/gradle/build/docs/model/Attachable<TT;>;>Ljava/lang/Object;Lorg/gradle/build/docs/model/ClassMetaDataRepository<TT;>;
+  #NNN = Utf8               SourceFile
+  #NNN = Utf8               SimpleClassMetaDataRepository.java
+  #NNN = NameAndType        #NNN:#NNN       //  "<init>":()V
+  #NNN = Utf8               java/util/HashMap
+  #NNN = NameAndType        #NNN:#NNN       //  classes:Ljava/util/Map;
+  #NNN = Utf8               java/io/FileInputStream
+  #NNN = NameAndType        #NNN:#NNN       //  "<init>":(Ljava/io/File;)V
+  #NNN = Utf8               java/io/ObjectInputStream
+  #NNN = Utf8               java/io/BufferedInputStream
+  #NNN = NameAndType        #NNN:#NNN      //  "<init>":(Ljava/io/InputStream;)V
+  #NNN = NameAndType        #NNN:#NNN      //  clear:()V
+  #NNN = NameAndType        #NNN:#NNN     //  readObject:()Ljava/lang/Object;
+  #NNN = Utf8               java/util/Map
+  #NNN = NameAndType        #NNN:#NNN     //  putAll:(Ljava/util/Map;)V
+  #NNN = NameAndType        #NNN:#NNN      //  close:()V
+  #NNN = Utf8               java/lang/Exception
+  #NNN = Utf8               org/gradle/api/GradleException
+  #NNN = Utf8               Could not load meta-data from %s.
+  #NNN = Utf8               java/lang/Object
+  #NNN = NameAndType        #NNN:#NNN     //  format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+  #NNN = NameAndType        #NNN:#NNN      //  "<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+  #NNN = Utf8               java/io/FileOutputStream
+  #NNN = Utf8               java/io/ObjectOutputStream
+  #NNN = Utf8               java/io/BufferedOutputStream
+  #NNN = NameAndType        #NNN:#NNN      //  "<init>":(Ljava/io/OutputStream;)V
+  #NNN = NameAndType        #NNN:#NNN     //  writeObject:(Ljava/lang/Object;)V
+  #NNN = Utf8               java/io/IOException
+  #NNN = Utf8               Could not write meta-data to %s.
+  #NNN = NameAndType        #NNN:#NNN     //  find:(Ljava/lang/String;)Lorg/gradle/build/docs/model/Attachable;
+  #NNN = Utf8               org/gradle/api/UnknownDomainObjectException
+  #NNN = Utf8               No meta-data is available for class '%s'. Did you mean? %s
+  #NNN = NameAndType        #NNN:#NNN     //  findPossibleMatches:(Ljava/lang/String;)Ljava/util/List;
+  #NNN = NameAndType        #NNN:#NNN      //  "<init>":(Ljava/lang/String;)V
+  #NNN = NameAndType        #NNN:#NNN     //  get:(Ljava/lang/Object;)Ljava/lang/Object;
+  #NNN = Utf8               org/gradle/build/docs/model/Attachable
+  #NNN = NameAndType        #NNN:#NNN     //  attach:(Lorg/gradle/build/docs/model/ClassMetaDataRepository;)V
+  #NNN = Utf8               java/util/ArrayList
+  #NNN = NameAndType        #NNN:#NNN     //  keySet:()Ljava/util/Set;
+  #NNN = Class              #NNN          //  java/util/Set
+  #NNN = NameAndType        #NNN:#NNN     //  iterator:()Ljava/util/Iterator;
+  #NNN = Class              #NNN          //  java/util/Iterator
+  #NNN = NameAndType        #NNN:#NNN     //  hasNext:()Z
+  #NNN = NameAndType        #NNN:#NNN     //  next:()Ljava/lang/Object;
+  #NNN = Utf8               java/lang/String
+  #NNN = Class              #NNN          //  org/apache/commons/lang/StringUtils
+  #NNN = NameAndType        #NNN:#NNN     //  getLevenshteinDistance:(Ljava/lang/String;Ljava/lang/String;)I
+  #NNN = Class              #NNN          //  java/util/List
+  #NNN = NameAndType        #NNN:#NNN     //  add:(Ljava/lang/Object;)Z
+  #NNN = NameAndType        #NNN:#NNN     //  put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #NNN = NameAndType        #NNN:#NNN     //  entrySet:()Ljava/util/Set;
+  #NNN = Utf8               java/util/Map$Entry
+  #NNN = NameAndType        #NNN:#NNN     //  getKey:()Ljava/lang/Object;
+  #NNN = NameAndType        #NNN:#NNN     //  getValue:()Ljava/lang/Object;
+  #NNN = Class              #NNN          //  groovy/lang/Closure
+  #NNN = NameAndType        #NNN:#NNN     //  call:([Ljava/lang/Object;)Ljava/lang/Object;
+  #NNN = NameAndType        #NNN:#NNN     //  values:()Ljava/util/Collection;
+  #NNN = Class              #NNN          //  java/util/Collection
+  #NNN = Class              #NNN          //  org/gradle/api/Action
+  #NNN = NameAndType        #NNN:#NNN     //  execute:(Ljava/lang/Object;)V
+  #NNN = NameAndType        #NNN:#NNN     //  put:(Ljava/lang/String;Lorg/gradle/build/docs/model/Attachable;)V
+  #NNN = NameAndType        #NNN:#NNN     //  get:(Ljava/lang/String;)Lorg/gradle/build/docs/model/Attachable;
+  #NNN = Utf8               org/gradle/build/docs/model/SimpleClassMetaDataRepository
+  #NNN = Utf8               org/gradle/build/docs/model/ClassMetaDataRepository
+  #NNN = Utf8               java/io/File
+  #NNN = Utf8               java/lang/Throwable
+  #NNN = Utf8               java/util/List
+  #NNN = Utf8               java/util/Iterator
+  #NNN = Utf8               (Ljava/io/InputStream;)V
+  #NNN = Utf8               clear
+  #NNN = Utf8               readObject
+  #NNN = Utf8               ()Ljava/lang/Object;
+  #NNN = Utf8               putAll
+  #NNN = Utf8               (Ljava/util/Map;)V
+  #NNN = Utf8               close
+  #NNN = Utf8               format
+  #NNN = Utf8               (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+  #NNN = Utf8               (Ljava/lang/String;Ljava/lang/Throwable;)V
+  #NNN = Utf8               (Ljava/io/OutputStream;)V
+  #NNN = Utf8               writeObject
+  #NNN = Utf8               (Ljava/lang/Object;)V
+  #NNN = Utf8               (Ljava/lang/String;)V
+  #NNN = Utf8               (Ljava/lang/Object;)Ljava/lang/Object;
+  #NNN = Utf8               attach
+  #NNN = Utf8               (Lorg/gradle/build/docs/model/ClassMetaDataRepository;)V
+  #NNN = Utf8               keySet
+  #NNN = Utf8               ()Ljava/util/Set;
+  #NNN = Utf8               java/util/Set
+  #NNN = Utf8               iterator
+  #NNN = Utf8               ()Ljava/util/Iterator;
+  #NNN = Utf8               hasNext
+  #NNN = Utf8               ()Z
+  #NNN = Utf8               next
+  #NNN = Utf8               org/apache/commons/lang/StringUtils
+  #NNN = Utf8               getLevenshteinDistance
+  #NNN = Utf8               (Ljava/lang/String;Ljava/lang/String;)I
+  #NNN = Utf8               add
+  #NNN = Utf8               (Ljava/lang/Object;)Z
+  #NNN = Utf8               (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+  #NNN = Utf8               entrySet
+  #NNN = Utf8               getKey
+  #NNN = Utf8               getValue
+  #NNN = Utf8               groovy/lang/Closure
+  #NNN = Utf8               call
+  #NNN = Utf8               ([Ljava/lang/Object;)Ljava/lang/Object;
+  #NNN = Utf8               values
+  #NNN = Utf8               ()Ljava/util/Collection;
+  #NNN = Utf8               java/util/Collection
+  #NNN = Utf8               org/gradle/api/Action
+  #NNN = Utf8               execute
+{
+  public org.gradle.build.docs.model.SimpleClassMetaDataRepository();
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0       
+         1: invokespecial #NNN                  // Method java/lang/Object."<init>":()V
+         4: aload_0       
+         5: new           #NNN                  // class java/util/HashMap
+         8: dup           
+         9: invokespecial #NNN                  // Method java/util/HashMap."<init>":()V
+        12: putfield      #NNN                  // Field classes:Ljava/util/Map;
+        15: return        
+      LineNumberTable:
+        line 27: 0
+        line 28: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      16     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      16     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository<TT;>;
+
+  public void load(java.io.File);
+    flags: ACC_PUBLIC
+    Code:
+      stack=7, locals=5, args_size=2
+         0: new           #NNN                  // class java/io/FileInputStream
+         3: dup           
+         4: aload_1       
+         5: invokespecial #NNN                  // Method java/io/FileInputStream."<init>":(Ljava/io/File;)V
+         8: astore_2      
+         9: new           #NNN                  // class java/io/ObjectInputStream
+        12: dup           
+        13: new           #NNN                  // class java/io/BufferedInputStream
+        16: dup           
+        17: aload_2       
+        18: invokespecial #NNN                  // Method java/io/BufferedInputStream."<init>":(Ljava/io/InputStream;)V
+        21: invokespecial #NNN                 // Method java/io/ObjectInputStream."<init>":(Ljava/io/InputStream;)V
+        24: astore_3      
+        25: aload_0       
+        26: getfield      #NNN                  // Field classes:Ljava/util/Map;
+        29: invokeinterface #NNN,  1           // InterfaceMethod java/util/Map.clear:()V
+        34: aload_0       
+        35: getfield      #NNN                  // Field classes:Ljava/util/Map;
+        38: aload_3       
+        39: invokevirtual #NNN                 // Method java/io/ObjectInputStream.readObject:()Ljava/lang/Object;
+        42: checkcast     #NNN                 // class java/util/Map
+        45: invokeinterface #NNN,  2           // InterfaceMethod java/util/Map.putAll:(Ljava/util/Map;)V
+        50: aload_2       
+        51: invokevirtual #NNN                 // Method java/io/FileInputStream.close:()V
+        54: goto          66
+        57: astore        4
+        59: aload_2       
+        60: invokevirtual #NNN                 // Method java/io/FileInputStream.close:()V
+        63: aload         4
+        65: athrow        
+        66: goto          92
+        69: astore_2      
+        70: new           #NNN                 // class org/gradle/api/GradleException
+        73: dup           
+        74: ldc           #NNN                 // String Could not load meta-data from %s.
+        76: iconst_1      
+        77: anewarray     #NNN                 // class java/lang/Object
+        80: dup           
+        81: iconst_0      
+        82: aload_1       
+        83: aastore       
+        84: invokestatic  #NNN                 // Method java/lang/String.format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+        87: aload_2       
+        88: invokespecial #NNN                 // Method org/gradle/api/GradleException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+        91: athrow        
+        92: return        
+      Exception table:
+         from    to  target type
+             9    50    57   any
+            57    59    57   any
+             0    66    69   Class java/lang/Exception
+      LineNumberTable:
+        line 33: 0
+        line 35: 9
+        line 36: 25
+        line 37: 34
+        line 39: 50
+        line 40: 54
+        line 39: 57
+        line 43: 66
+        line 41: 69
+        line 42: 70
+        line 44: 92
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+              25      25     3 objInputStream   Ljava/io/ObjectInputStream;
+               9      57     2 inputStream   Ljava/io/FileInputStream;
+              70      22     2     e   Ljava/lang/Exception;
+               0      93     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository;
+               0      93     1 repoFile   Ljava/io/File;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      93     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository<TT;>;
+      StackMapTable: number_of_entries = 4
+           frame_type = 255 /* full_frame */
+          offset_delta = 57
+          locals = [ class org/gradle/build/docs/model/SimpleClassMetaDataRepository, class java/io/File, class java/io/FileInputStream ]
+          stack = [ class java/lang/Throwable ]
+           frame_type = 250 /* chop */
+          offset_delta = 8
+           frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/lang/Exception ]
+           frame_type = 22 /* same */
+
+
+  public void store(java.io.File);
+    flags: ACC_PUBLIC
+    Code:
+      stack=7, locals=5, args_size=2
+         0: new           #NNN                 // class java/io/FileOutputStream
+         3: dup           
+         4: aload_1       
+         5: invokespecial #NNN                 // Method java/io/FileOutputStream."<init>":(Ljava/io/File;)V
+         8: astore_2      
+         9: new           #NNN                 // class java/io/ObjectOutputStream
+        12: dup           
+        13: new           #NNN                 // class java/io/BufferedOutputStream
+        16: dup           
+        17: aload_2       
+        18: invokespecial #NNN                 // Method java/io/BufferedOutputStream."<init>":(Ljava/io/OutputStream;)V
+        21: invokespecial #NNN                 // Method java/io/ObjectOutputStream."<init>":(Ljava/io/OutputStream;)V
+        24: astore_3      
+        25: aload_3       
+        26: aload_0       
+        27: getfield      #NNN                  // Field classes:Ljava/util/Map;
+        30: invokevirtual #NNN                 // Method java/io/ObjectOutputStream.writeObject:(Ljava/lang/Object;)V
+        33: aload_3       
+        34: invokevirtual #NNN                 // Method java/io/ObjectOutputStream.close:()V
+        37: aload_2       
+        38: invokevirtual #NNN                 // Method java/io/FileOutputStream.close:()V
+        41: goto          53
+        44: astore        4
+        46: aload_2       
+        47: invokevirtual #NNN                 // Method java/io/FileOutputStream.close:()V
+        50: aload         4
+        52: athrow        
+        53: goto          79
+        56: astore_2      
+        57: new           #NNN                 // class org/gradle/api/GradleException
+        60: dup           
+        61: ldc           #NNN                 // String Could not write meta-data to %s.
+        63: iconst_1      
+        64: anewarray     #NNN                 // class java/lang/Object
+        67: dup           
+        68: iconst_0      
+        69: aload_1       
+        70: aastore       
+        71: invokestatic  #NNN                 // Method java/lang/String.format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+        74: aload_2       
+        75: invokespecial #NNN                 // Method org/gradle/api/GradleException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+        78: athrow        
+        79: return        
+      Exception table:
+         from    to  target type
+             9    37    44   any
+            44    46    44   any
+             0    53    56   Class java/io/IOException
+      LineNumberTable:
+        line 48: 0
+        line 50: 9
+        line 51: 25
+        line 52: 33
+        line 54: 37
+        line 55: 41
+        line 54: 44
+        line 58: 53
+        line 56: 56
+        line 57: 57
+        line 59: 79
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+              25      12     3 objOutputStream   Ljava/io/ObjectOutputStream;
+               9      44     2 outputStream   Ljava/io/FileOutputStream;
+              57      22     2     e   Ljava/io/IOException;
+               0      80     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository;
+               0      80     1 repoFile   Ljava/io/File;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      80     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository<TT;>;
+      StackMapTable: number_of_entries = 4
+           frame_type = 255 /* full_frame */
+          offset_delta = 44
+          locals = [ class org/gradle/build/docs/model/SimpleClassMetaDataRepository, class java/io/File, class java/io/FileOutputStream ]
+          stack = [ class java/lang/Throwable ]
+           frame_type = 250 /* chop */
+          offset_delta = 8
+           frame_type = 66 /* same_locals_1_stack_item */
+          stack = [ class java/io/IOException ]
+           frame_type = 22 /* same */
+
+
+  public T get(java.lang.String);
+    flags: ACC_PUBLIC
+    Code:
+      stack=8, locals=3, args_size=2
+         0: aload_0       
+         1: aload_1       
+         2: invokevirtual #NNN                 // Method find:(Ljava/lang/String;)Lorg/gradle/build/docs/model/Attachable;
+         5: astore_2      
+         6: aload_2       
+         7: ifnonnull     39
+        10: new           #NNN                 // class org/gradle/api/UnknownDomainObjectException
+        13: dup           
+        14: ldc           #NNN                 // String No meta-data is available for class '%s'. Did you mean? %s
+        16: iconst_2      
+        17: anewarray     #NNN                 // class java/lang/Object
+        20: dup           
+        21: iconst_0      
+        22: aload_1       
+        23: aastore       
+        24: dup           
+        25: iconst_1      
+        26: aload_0       
+        27: aload_1       
+        28: invokespecial #NNN                 // Method findPossibleMatches:(Ljava/lang/String;)Ljava/util/List;
+        31: aastore       
+        32: invokestatic  #NNN                 // Method java/lang/String.format:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+        35: invokespecial #NNN                 // Method org/gradle/api/UnknownDomainObjectException."<init>":(Ljava/lang/String;)V
+        38: athrow        
+        39: aload_2       
+        40: areturn       
+      LineNumberTable:
+        line 62: 0
+        line 63: 6
+        line 64: 10
+        line 66: 39
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      41     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository;
+               0      41     1 fullyQualifiedClassName   Ljava/lang/String;
+               6      35     2     t   Lorg/gradle/build/docs/model/Attachable;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      41     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository<TT;>;
+            6      35     2     t   TT;
+      StackMapTable: number_of_entries = 1
+           frame_type = 252 /* append */
+             offset_delta = 39
+        locals = [ class org/gradle/build/docs/model/Attachable ]
+
+    Signature: #NNN                         // (Ljava/lang/String;)TT;
+
+  public T find(java.lang.String);
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=3, args_size=2
+         0: aload_0       
+         1: getfield      #NNN                  // Field classes:Ljava/util/Map;
+         4: aload_1       
+         5: invokeinterface #NNN,  2           // InterfaceMethod java/util/Map.get:(Ljava/lang/Object;)Ljava/lang/Object;
+        10: checkcast     #NNN                 // class org/gradle/build/docs/model/Attachable
+        13: astore_2      
+        14: aload_2       
+        15: ifnull        25
+        18: aload_2       
+        19: aload_0       
+        20: invokeinterface #NNN,  2           // InterfaceMethod org/gradle/build/docs/model/Attachable.attach:(Lorg/gradle/build/docs/model/ClassMetaDataRepository;)V
+        25: aload_2       
+        26: areturn       
+      LineNumberTable:
+        line 70: 0
+        line 71: 14
+        line 72: 18
+        line 74: 25
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      27     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository;
+               0      27     1 fullyQualifiedClassName   Ljava/lang/String;
+              14      13     2     t   Lorg/gradle/build/docs/model/Attachable;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      27     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository<TT;>;
+           14      13     2     t   TT;
+      StackMapTable: number_of_entries = 1
+           frame_type = 252 /* append */
+             offset_delta = 25
+        locals = [ class org/gradle/build/docs/model/Attachable ]
+
+    Signature: #NNN                         // (Ljava/lang/String;)TT;
+
+  public void put(java.lang.String, T);
+    flags: ACC_PUBLIC
+    Code:
+      stack=3, locals=3, args_size=3
+         0: aload_0       
+         1: getfield      #NNN                  // Field classes:Ljava/util/Map;
+         4: aload_1       
+         5: aload_2       
+         6: invokeinterface #NNN,  3           // InterfaceMethod java/util/Map.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+        11: pop           
+        12: return        
+      LineNumberTable:
+        line 88: 0
+        line 89: 12
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      13     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository;
+               0      13     1 fullyQualifiedClassName   Ljava/lang/String;
+               0      13     2 metaData   Lorg/gradle/build/docs/model/Attachable;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      13     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository<TT;>;
+            0      13     2 metaData   TT;
+    Signature: #NNN                         // (Ljava/lang/String;TT;)V
+
+  public void each(groovy.lang.Closure);
+    flags: ACC_PUBLIC
+    Code:
+      stack=5, locals=4, args_size=2
+         0: aload_0       
+         1: getfield      #NNN                  // Field classes:Ljava/util/Map;
+         4: invokeinterface #NNN,  1           // InterfaceMethod java/util/Map.entrySet:()Ljava/util/Set;
+         9: invokeinterface #NNN,  1           // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+        14: astore_2      
+        15: aload_2       
+        16: invokeinterface #NNN,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        21: ifeq          64
+        24: aload_2       
+        25: invokeinterface #NNN,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        30: checkcast     #NNN                 // class java/util/Map$Entry
+        33: astore_3      
+        34: aload_1       
+        35: iconst_2      
+        36: anewarray     #NNN                 // class java/lang/Object
+        39: dup           
+        40: iconst_0      
+        41: aload_3       
+        42: invokeinterface #NNN,  1           // InterfaceMethod java/util/Map$Entry.getKey:()Ljava/lang/Object;
+        47: aastore       
+        48: dup           
+        49: iconst_1      
+        50: aload_3       
+        51: invokeinterface #NNN,  1           // InterfaceMethod java/util/Map$Entry.getValue:()Ljava/lang/Object;
+        56: aastore       
+        57: invokevirtual #NNN                 // Method groovy/lang/Closure.call:([Ljava/lang/Object;)Ljava/lang/Object;
+        60: pop           
+        61: goto          15
+        64: return        
+      LineNumberTable:
+        line 92: 0
+        line 93: 34
+        line 94: 61
+        line 95: 64
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+              34      27     3 entry   Ljava/util/Map$Entry;
+              15      49     2    i$   Ljava/util/Iterator;
+               0      65     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository;
+               0      65     1    cl   Lgroovy/lang/Closure;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           34      27     3 entry   Ljava/util/Map$Entry<Ljava/lang/String;TT;>;
+            0      65     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository<TT;>;
+      StackMapTable: number_of_entries = 2
+           frame_type = 252 /* append */
+             offset_delta = 15
+        locals = [ class java/util/Iterator ]
+           frame_type = 250 /* chop */
+          offset_delta = 48
+
+
+  public void each(org.gradle.api.Action<? super T>);
+    flags: ACC_PUBLIC
+    Code:
+      stack=2, locals=4, args_size=2
+         0: aload_0       
+         1: getfield      #NNN                  // Field classes:Ljava/util/Map;
+         4: invokeinterface #NNN,  1           // InterfaceMethod java/util/Map.values:()Ljava/util/Collection;
+         9: invokeinterface #NNN,  1           // InterfaceMethod java/util/Collection.iterator:()Ljava/util/Iterator;
+        14: astore_2      
+        15: aload_2       
+        16: invokeinterface #NNN,  1           // InterfaceMethod java/util/Iterator.hasNext:()Z
+        21: ifeq          44
+        24: aload_2       
+        25: invokeinterface #NNN,  1           // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+        30: checkcast     #NNN                 // class org/gradle/build/docs/model/Attachable
+        33: astore_3      
+        34: aload_1       
+        35: aload_3       
+        36: invokeinterface #NNN,  2           // InterfaceMethod org/gradle/api/Action.execute:(Ljava/lang/Object;)V
+        41: goto          15
+        44: return        
+      LineNumberTable:
+        line 98: 0
+        line 99: 34
+        line 100: 41
+        line 101: 44
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+              34       7     3     t   Lorg/gradle/build/docs/model/Attachable;
+              15      29     2    i$   Ljava/util/Iterator;
+               0      45     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository;
+               0      45     1 action   Lorg/gradle/api/Action;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+           34       7     3     t   TT;
+            0      45     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository<TT;>;
+            0      45     1 action   Lorg/gradle/api/Action<-TT;>;
+      StackMapTable: number_of_entries = 2
+           frame_type = 252 /* append */
+             offset_delta = 15
+        locals = [ class java/util/Iterator ]
+           frame_type = 250 /* chop */
+          offset_delta = 28
+
+    Signature: #NNN                         // (Lorg/gradle/api/Action<-TT;>;)V
+
+  public void put(java.lang.String, java.lang.Object);
+    flags: ACC_PUBLIC, ACC_BRIDGE, ACC_SYNTHETIC
+    Code:
+      stack=3, locals=3, args_size=3
+         0: aload_0       
+         1: aload_1       
+         2: aload_2       
+         3: checkcast     #NNN                 // class org/gradle/build/docs/model/Attachable
+         6: invokevirtual #NNN                 // Method put:(Ljava/lang/String;Lorg/gradle/build/docs/model/Attachable;)V
+         9: return        
+      LineNumberTable:
+        line 27: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0      10     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository;
+               0      10     1    x0   Ljava/lang/String;
+               0      10     2    x1   Ljava/lang/Object;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0      10     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository<TT;>;
+
+  public java.lang.Object find(java.lang.String);
+    flags: ACC_PUBLIC, ACC_BRIDGE, ACC_SYNTHETIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0       
+         1: aload_1       
+         2: invokevirtual #NNN                 // Method find:(Ljava/lang/String;)Lorg/gradle/build/docs/model/Attachable;
+         5: areturn       
+      LineNumberTable:
+        line 27: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       6     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository;
+               0       6     1    x0   Ljava/lang/String;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0       6     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository<TT;>;
+
+  public java.lang.Object get(java.lang.String) throws org.gradle.api.UnknownDomainObjectException;
+    flags: ACC_PUBLIC, ACC_BRIDGE, ACC_SYNTHETIC
+    Code:
+      stack=2, locals=2, args_size=2
+         0: aload_0       
+         1: aload_1       
+         2: invokevirtual #NNN                 // Method get:(Ljava/lang/String;)Lorg/gradle/build/docs/model/Attachable;
+         5: areturn       
+      LineNumberTable:
+        line 27: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+               0       6     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository;
+               0       6     1    x0   Ljava/lang/String;
+      LocalVariableTypeTable:
+        Start  Length  Slot  Name   Signature
+            0       6     0  this   Lorg/gradle/build/docs/model/SimpleClassMetaDataRepository<TT;>;
+    Exceptions:
+      throws org.gradle.api.UnknownDomainObjectException
+}
